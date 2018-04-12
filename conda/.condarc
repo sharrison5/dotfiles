@@ -1,0 +1,9 @@
+# .condarc
+# Sam Harrison 2018
+# MIT License: a full version of the license is included in the LICENSE file.
+
+changeps1: false
+channels:
+  - conda-forge
+  - defaults
+  - anaconda

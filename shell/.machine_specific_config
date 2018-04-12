@@ -1,0 +1,6 @@
+# .machine_specific_config
+# Sam Harrison 2018
+# MIT License: a full version of the license is included in the LICENSE file.
+
+export CONDA_DIR=
+export CONDA_DEFAULT_ENV=base
