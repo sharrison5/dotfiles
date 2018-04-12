@@ -1,0 +1,5 @@
+Thu Apr 12 18:02:35 CEST 2018
+bash
+bash-completion
+git
+stow
