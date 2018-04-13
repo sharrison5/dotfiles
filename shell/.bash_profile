@@ -56,12 +56,13 @@ export EDITOR VISUAL
 # Prompt
 # https://ss64.com/bash/syntax-prompt.html
 # Username: \u; Hostname: \H; working dir: \w
+red='\[\e[0;31m\]'
 green='\[\e[0;32m\]'
+purple='\[\e[0;35m\]'
 grey='\[\e[0;37m\]'
 bold_grey='\[\e[1;37m\]'
 cr='\[\e[0m\]'
-#PS1="${green}\u${cr}${grey}@${cr}${green}\H${cr}${grey}:\w${cr}${bold_grey} \$ ${cr}"
-PS1="${green}\u${cr}${grey}@${cr}${green}MBP${cr}${grey}:\w${cr}${bold_grey} \$ ${cr}"
+PS1="${purple}\u${cr}${grey}@${cr}${purple}${MACHINE_NAME}${cr}${grey}:\W${cr}${bold_grey} \$ ${cr}"
 export PS1
 
 
