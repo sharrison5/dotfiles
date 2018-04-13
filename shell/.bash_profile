@@ -55,14 +55,18 @@ export EDITOR VISUAL
 
 # Prompt
 # https://ss64.com/bash/syntax-prompt.html
-# Username: \u; Hostname: \H; working dir: \w
-red='\[\e[0;31m\]'
-green='\[\e[0;32m\]'
-purple='\[\e[0;35m\]'
-grey='\[\e[0;37m\]'
-bold_grey='\[\e[1;37m\]'
+# For format codes see:
+# https://stackoverflow.com/a/33206814
+# Username: \u; Hostname: \h,\H; working dir: \w,\W
+red='\[\e[0;31m\]'; green='\[\e[0;32m\]'; blue_u='\[\e[4;34m\]'
+purple='\[\e[0;35m\]'; grey='\[\e[0;37m\]'; grey_b='\[\e[1;37m\]'
 cr='\[\e[0m\]'
-PS1="${purple}\u${cr}${grey}@${cr}${purple}${MACHINE_NAME}${cr}${grey}:\W${cr}${bold_grey} \$ ${cr}"
+if [ -n "$SSH_CLIENT" ]; then
+    MACHINE_COLOUR="${blue_u}"
+else
+    MACHINE_COLOUR="${purple}"
+fi
+PS1="${purple}\u${cr}${grey}@${cr}${MACHINE_COLOUR}${MACHINE_NAME}${cr}${grey}:\W${cr}${grey_b} \$ ${cr}"
 export PS1
 
 
