@@ -55,14 +55,15 @@ export EDITOR VISUAL
 
 # Prompt
 # https://ss64.com/bash/syntax-prompt.html
+# Username: \u; Hostname: \h,\H; working dir: \w,\W
 # For format codes see:
 # https://stackoverflow.com/a/33206814
-# Username: \u; Hostname: \h,\H; working dir: \w,\W
-cyan='\[\e[0;36m\]'; blue_u='\[\e[4;34m\]'
+# https://misc.flogisoft.com/bash/tip_colors_and_formatting
+cyan='\[\e[0;36m\]'; cyan_bu='\[\e[1;4;36m\]'
 grey='\[\e[0;37m\]'; grey_b='\[\e[1;37m\]'
 cr='\[\e[0m\]'
 if [ -n "$SSH_CLIENT" ]; then
-    MACHINE_COLOUR="${blue_u}"
+    MACHINE_COLOUR="${cyan_bu}"
 else
     MACHINE_COLOUR="${cyan}"
 fi
