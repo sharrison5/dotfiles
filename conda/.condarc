@@ -2,7 +2,13 @@
 # Sam Harrison 2018
 # MIT License: a full version of the license is included in the LICENSE file.
 
+# See "conda config --help" for more information.
+
+# If you don't want packages saved in your home directory, edit the following:
+# conda config --show envs_dirs
+
 changeps1: false
+
 channels:
   - conda-forge
   - defaults
