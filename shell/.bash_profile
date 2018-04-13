@@ -67,7 +67,15 @@ export PS1
 
 ## BASHRC ##
 
-# And finally load aliases etc for interactive shells
+# Load aliases etc for interactive shells
 if [ -r "${HOME}/.bashrc" ]; then
     . "${HOME}/.bashrc"
+fi
+
+
+## LOCAL COMMANDS ##
+
+# And finally run any machine specific commands
+if [ -r "${HOME}/.local_profile" ]; then
+    . "${HOME}/.local_profile"
 fi
