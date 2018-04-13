@@ -58,15 +58,15 @@ export EDITOR VISUAL
 # For format codes see:
 # https://stackoverflow.com/a/33206814
 # Username: \u; Hostname: \h,\H; working dir: \w,\W
-red='\[\e[0;31m\]'; green='\[\e[0;32m\]'; blue_u='\[\e[4;34m\]'
-purple='\[\e[0;35m\]'; grey='\[\e[0;37m\]'; grey_b='\[\e[1;37m\]'
+cyan='\[\e[0;36m\]'; blue_u='\[\e[4;34m\]'
+grey='\[\e[0;37m\]'; grey_b='\[\e[1;37m\]'
 cr='\[\e[0m\]'
 if [ -n "$SSH_CLIENT" ]; then
     MACHINE_COLOUR="${blue_u}"
 else
-    MACHINE_COLOUR="${purple}"
+    MACHINE_COLOUR="${cyan}"
 fi
-PS1="${purple}\u${cr}${grey}@${cr}${MACHINE_COLOUR}${MACHINE_NAME}${cr}${grey}:\W${cr}${grey_b} \$ ${cr}"
+PS1="${cyan}\u${cr}${grey}@${cr}${MACHINE_COLOUR}${MACHINE_NAME}${cr}${grey}:\W${cr}${grey_b} \$ ${cr}"
 export PS1
 
 
