@@ -1,23 +1,21 @@
 Sat 14 Apr 2018 10:40:44 CEST
-agree
 armadillo
 bash
 bash-completion
 boost
 clang-6.0
 clang_select
+curl
 ffmpeg
 gcc7
 gcc_select
 git
 gnuplot
-gti
 hdf5
-htop
 llvm-6.0
 llvm_select
 port_cutleaves
-sl
+rsync
 sloccount
 sshfs
 stow

@@ -5,52 +5,53 @@ This is simply a list of the commands I use most when using
 The [MacPorts Guide](https://guide.macports.org/#using.port) is much better!
 
 ### Maintenance
+```
 sudo port selfupdate
 port outdated
 sudo port upgrade outdated
-
-### Tidying up
-sudo port uninstall --follow-dependencies <blah>
-du -sh /opt/local/
-sudo port uninstall inactive
-sudo port_cutleaves
-sudo port reclaim
-du -sh /opt/local/
-
-### Leaves
-port installed > Installed.txt
-port installed active > Active.txt
-port echo requested > Requested.txt
-sudo port setrequested <blah>
+```
 
 ### Installation
-port search --name <port*>
-port info <port>
+```
+port search --name '<port>*'
+port info <port>; port variants <port>
 sudo port install <port>
+port contents <port>
 
-### Basics
-sudo port install bash bash-completion
-sudo port install port_cutleaves
-
-### Command line
-sudo port install git
-sudo port install htop tree sloccount sshfs stow watch wget
-
-### C++
-sudo port install gcc_select clang_select llvm_select
-sudo port install gcc7 clang-6.0 llvm-6.0
-Select GCC, LLVM, clang
+# For setting which variant to use / overriding system defaults
+sudo port install <port_select>
 port select --summary
-sudo port select --set gcc mp-gcc7
-sudo port select --set clang mp-clang-6.0
-sudo port select --set llvm mp-llvm-6.0
-sudo port install boost tclap hdf5 armadillo
+sudo port select --set <port> <variant>
+```
 
-### Plotting etc
-sudo port install ffmpeg gnuplot
+### Management
+```
+~/.macports/save_requested
+```
+It can be useful to mark common ports as requested, so that they do not
+get cleaned up and then reinstalled repeatedly. To do this, use:
+```
+port echo leaves
+sudo port setrequested <port>
+```
 
-### Random
-sudo port install gti sl agree
+### Tidying up
+```
+sudo port uninstall --follow-dependencies <blah>
+```
+```
+du -sh /opt/local/
+sudo port uninstall inactive
+sudo port_cutleaves # May need to run several times
+sudo port reclaim
+du -sh /opt/local/
+```
+
+### Migration
+After upgrading [macOS](https://www.apple.com/macos) it is necessary to
+essentially reinstall MacPorts.
+See the [MacPorts Wiki](https://trac.macports.org/wiki/Migration) for
+more details.
 
 ---
 
@@ -58,5 +59,5 @@ sudo port install gti sl agree
 Sam Harrison, 2018, MIT License.
 A full version of the license is included in the LICENSE file.
 
-Written in [Markown (CommonMark)](http://commonmark.org/)
-using [Dillinger](http://dillinger.io).
+Written in [Markown (CommonMark)](http://commonmark.org/) using the
+[live testing tool](http://try.commonmark.org/).
