@@ -6,6 +6,17 @@
 # variables, and for any intensive operations that you may want to perform on
 # startup, but not for any subsequent subprocesses (e.g. diagnostic information
 # about the machine).
+# The exported environment variables will be inherited by any subshells / 
+# subprocesses, so we should only need to set them once here (and in 
+# .profile and .local_profile etc). Subprocesses will be run by non-login, 
+# non-interactive shells. Starting a terminal in an existing session will 
+# open a non-login, interactive shell. For these, we need to update any 
+# useful settings that are not inherited (e.g. aliases), and we do this 
+# via .bashrc (and friends).
+# Note that this distinction is important because e.g. setting $PATH is 
+# not idempotent, so to prevent an ever expanding $PATH we should (1) only 
+# export environment variables from .*profile* files, and (2) should not
+# source .*profile* files from .*rc files.
 
 # http://www.gnu.org/software/bash/manual/bashref.html#Bash-Startup-Files
 # https://superuser.com/a/789465

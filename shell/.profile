@@ -7,9 +7,6 @@
 # compatible with all /bin/sh variants.
 # See .bash_profile for some useful links.
 
-# Note that e.g. setting $PATH is not idempotent, so to prevent an ever
-# expanding $PATH we should only source this from *profile rather than *rc.
-
 #echo ".profile"
 
 
