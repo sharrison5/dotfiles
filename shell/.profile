@@ -3,7 +3,7 @@
 # MIT License: a full version of the license is included in the LICENSE file.
 
 # .profile is for the Bourne shell, and is used as for setting options that
-# we want for all shells (e.g. $PATH and friends). It must therefore be 
+# we want for all shells (e.g. $PATH and friends). It must therefore be
 # compatible with all /bin/sh variants.
 # See .bash_profile for some useful links.
 
