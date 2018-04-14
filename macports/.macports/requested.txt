@@ -1,10 +1,8 @@
-Sat 14 Apr 2018 10:40:44 CEST
+Sat 14 Apr 2018 20:37:32 CEST
 armadillo
 bash
 bash-completion
 boost
-clang-6.0
-clang_select
 curl
 ffmpeg
 gcc7
@@ -12,8 +10,6 @@ gcc_select
 git
 gnuplot
 hdf5
-llvm-6.0
-llvm_select
 port_cutleaves
 rsync
 sloccount
