@@ -53,7 +53,7 @@ essentially reinstall MacPorts.
 See the [MacPorts Wiki](https://trac.macports.org/wiki/Migration) for
 more details.
 
----
+--------------------
 
 ###### Colophon
 Sam Harrison, 2018, MIT License.

@@ -1,0 +1,27 @@
+[user]
+	name = Sam Harrison
+	email = 28861239+sharrison5@users.noreply.github.com
+
+[color]
+	ui = auto
+
+[diff]
+	# Better prefixes than a/ b/
+	mnemonicPrefix = true
+	# Detect copies as well as renames
+	renames = copies
+
+[merge]
+	# More useful display of merge conflicts
+	conflictstyle = diff3
+
+[pull]
+	# Only fast-forward merges allowed when pulling
+	# Can always pass --ff to override
+	ff = only
+
+[status]
+	# Always show paths relative to base dir, even if elsewhere
+	relativePaths = false
+	# Show brief branch summary when doing status --short
+	branch = true
