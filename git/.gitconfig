@@ -28,6 +28,10 @@
 	# Can always pass --ff to override
 	ff = only
 
+[push]
+	# Push (reachable) annotated tags by default
+	followTags = true
+
 [status]
 	# Always show paths relative to base dir, even if elsewhere
 	relativePaths = false
