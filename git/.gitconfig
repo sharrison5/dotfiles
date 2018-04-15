@@ -1,3 +1,7 @@
+# .gitconfig
+# Sam Harrison 2018
+# MIT License: a full version of the license is included in the LICENSE file.
+
 [user]
 	name = Sam Harrison
 	email = 28861239+sharrison5@users.noreply.github.com
