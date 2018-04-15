@@ -34,6 +34,14 @@ current repository) or `global` options. In general, use
 limitlessly [customisable](https://git-scm.com/docs/git-config), so there
 is a lot more to play with!
 
+I also have global [`.gitignore`](https://git-scm.com/docs/gitignore)
+and [`.gitattributes`](https://www.git-scm.com/docs/gitattributes) files.
+Some of these rules should be included in specific repositories too, but
+they serve as useful templates. See
+[github.com/github/gitignore](https://github.com/github/gitignore) and
+[github.com/alexkaratarakis/gitattributes](https://github.com/alexkaratarakis/gitattributes)
+for useful collections of these rules.
+
 --------------------
 
 ###### Colophon

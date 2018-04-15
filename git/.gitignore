@@ -1,0 +1,96 @@
+# .gitignore
+# Sam Harrison 2018
+# MIT License: a full version of the license is included in the LICENSE file.
+
+
+## OS FILES ##
+
+*~
+._*
+.DS_Store*
+.nfs*
+[Tt]humbs.db
+.Trash*
+
+
+## ARCHIVES etc ##
+
+*.7z
+*.bz2
+*.bzip
+*.dmg
+*.gz
+*.iso
+*.tar
+*.tgz
+*.xz
+*.zip
+
+
+## C++ ##
+
+*.a
+*.dll
+*.dylib
+*.lib
+*.o
+*.so
+
+
+## LATEX ##
+
+*.acn
+*.acr
+*.alg
+*.aux
+*.bbl
+*.bcf
+*.bib.bak
+*.blg
+*-blx.bib
+*.dvi
+*-eps-converted-to.pdf
+*.fdb_latexmk
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.lof
+*.log
+*.lot
+*.maf
+*-mpgraph.mp
+*.mtc
+*.mtc0
+*.nav
+*.nlo
+*.out
+# *.pdf
+*.pdfsync
+*.ps
+*.snm
+*.synctex.gz
+*.toc
+*.top
+*.tui
+*.vrb
+*.xdy
+*.xml
+
+
+## PYTHON ##
+
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints
+
+
+## MATLAB ##
+
+*.m~
+*.mat
+*.mex*

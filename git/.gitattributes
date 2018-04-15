@@ -1,0 +1,45 @@
+# .gitattributes
+# Sam Harrison 2018
+# MIT License: a full version of the license is included in the LICENSE file.
+
+
+## ARCHIVES etc ##
+
+*.7z    binary
+*.bz2   binary
+*.bzip  binary
+*.dmg   binary
+*.gz    binary
+*.iso   binary
+*.tar   binary
+*.tgz   binary
+*.xz    binary
+*.zip   binary
+
+
+## DATA ##
+
+*.csv   binary
+*.gii   binary
+*.mat   binary
+*.nii   binary
+
+
+## DOCUMENTS ##
+
+*.pdf   binary
+*.ps    binary
+
+
+## IMAGES ##
+
+*.bmp   binary
+*.eps   binary
+*.gif   binary
+*.jpg   binary
+*.jpeg  binary
+*.png   binary
+*.svg   text
+*.svgz  binary
+*.tif   binary
+*.tiff  binary

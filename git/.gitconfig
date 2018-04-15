@@ -5,6 +5,10 @@
 [color]
 	ui = auto
 
+[core]
+	attributesfile = ~/.gitattributes
+	excludesfile = ~/.gitignore
+
 [diff]
 	# Better prefixes than a/ b/
 	mnemonicPrefix = true
