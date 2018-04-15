@@ -68,7 +68,7 @@ git remote add origin <git@git.com:me/project.git>
 ```
 or
 ```
-git clone <git@git.com:me/project.git>
+git clone [--recursive] <git@git.com:me/project.git>
 cd <project/>
 ```
 Do some commits, and then:
@@ -90,6 +90,11 @@ Save it to e.g. `~/.ssh/id_rsa_<description>`. Copy the **public** key
 Host git.com
 PubkeyAuthentication yes
 IdentityFile ~/.ssh/id_rsa_<description>
+```
+Finally, it may be necessary to change the remote to use SSH if it is not
+already configured to do so. Do this using:
+```
+git remote set-url origin <ssh://git@git.com:me/project.git>
 ```
 
 --------------------
