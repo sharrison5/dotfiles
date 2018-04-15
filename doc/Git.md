@@ -11,13 +11,13 @@ The [Git Reference Manual](https://git-scm.com/docs) and the
 references, though they can be a little
 [opaque](https://git-man-page-generator.lokaltog.net).
 
-http://nvie.com/posts/a-successful-git-branching-model/
-https://chris.beams.io/posts/git-commit/
-
 https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
 https://sentheon.com/blog/git-cheat-sheet.html
 https://gist.github.com/eashish93/3eca6a90fef1ea6e586b7ec211ff72a5
-Git from the ground up
+Git from the bottom up: http://newartisans.com/2008/04/git-from-the-bottom-up/
+
+http://ohshitgit.com/
+http://stevelosh.com/blog/2013/04/git-koans/
 
 --------------------
 
@@ -41,6 +41,57 @@ they serve as useful templates. See
 [github.com/github/gitignore](https://github.com/github/gitignore) and
 [github.com/alexkaratarakis/gitattributes](https://github.com/alexkaratarakis/gitattributes)
 for useful collections of these rules.
+
+--------------------
+
+### General workflow
+
+I tend to use
+[Git Flow](https://nvie.com/posts/a-successful-git-branching-model/), though
+YMMV. One of the key features which I tend to use even if not sticking to the
+full-fat version is to use `git merge --no-ff` to preserve branch information.
+Of course, you could also set `git config --global merge.ff only`.
+
+Otherwise, good commit messages help! See
+[this article](https://chris.beams.io/posts/git-commit/) for an overview,
+but the key take homes are to write short (\<50 character) subject lines in
+the imperative (i.e. *This commit will \<subject line\>*), and to use the
+body to explain *what* and *why*.
+
+--------------------
+
+### Geting started
+
+```
+cd <project/>
+git init
+git remote add origin <git@git.com:me/project.git>
+```
+or
+```
+git clone <git@git.com:me/project.git>
+cd <project/>
+```
+Do some commits, and then:
+```
+git push [-u|--set-upstream] origin [<branch>|--all]
+```
+
+###### SSH Keys
+That should have us up and running, but we typically want to add SSH keys to
+streamline the process of interacting with the server. Generate the key
+using e.g.:
+```
+ssh-keygen -t rsa -C "<example@email.com> <description>" -b 4096
+```
+Save it to e.g. `~/.ssh/id_rsa_<description>`. Copy the **public** key
+(`.pub`) to the server, and then modify `~/.ssh/config` as follows:
+```
+# Git server
+Host git.com
+PubkeyAuthentication yes
+IdentityFile ~/.ssh/id_rsa_<description>
+```
 
 --------------------
 
