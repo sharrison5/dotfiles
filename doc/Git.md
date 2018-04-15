@@ -10,14 +10,13 @@ The [Git Reference Manual](https://git-scm.com/docs) and the
 [Pro Git book](https://www.git-scm.com/book/en/v2) are the canonical
 references, though they can be a little
 [opaque](https://git-man-page-generator.lokaltog.net).
-
-https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
-https://sentheon.com/blog/git-cheat-sheet.html
-https://gist.github.com/eashish93/3eca6a90fef1ea6e586b7ec211ff72a5
-Git from the bottom up: http://newartisans.com/2008/04/git-from-the-bottom-up/
-
-http://ohshitgit.com/
-http://stevelosh.com/blog/2013/04/git-koans/
+There are more 'Cheat Sheets' than you can shake a stick at, but I
+particularly like [this one](https://sentheon.com/blog/git-cheat-sheet.html)
+(see also [here](https://gist.github.com/eashish93/3eca6a90fef1ea6e586b7ec211ff72a5)
+and [here](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)).
+Finally, '[Git from the bottom up](http://newartisans.com/2008/04/git-from-the-bottom-up/)'
+is an excellent overview of Git's internals, or if you just want something
+completely different try [here](http://stevelosh.com/blog/2013/04/git-koans/).
 
 --------------------
 
