@@ -7,3 +7,5 @@ export MACHINE_NAME='\h'
 
 export CONDA_DIR=
 export CONDA_DEFAULT_ENV=base
+
+export FSLDIR=

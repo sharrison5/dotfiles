@@ -35,12 +35,6 @@ if [ -r "${HOME}/.profile" ]; then
 fi
 
 
-## CONDA ##
-if [ -r "${CONDA_DIR}/etc/profile.d/conda.sh" ]; then
-    . "${CONDA_DIR}/etc/profile.d/conda.sh"
-    conda activate "${CONDA_DEFAULT_ENV}"
-fi
-
 ## HISTORY ##
 
 HISTSIZE=5000

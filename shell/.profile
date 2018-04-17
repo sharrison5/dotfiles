@@ -26,19 +26,34 @@ if [ -d "${HOME}/bin" ]; then
 fi
 
 # MacPorts
-# export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# export PATH="/opt/local/bin:/opt/local/sbin:${PATH}"
 if [ -d /opt/local/sbin ]; then
-    PATH="/opt/local/sbin:$PATH"
+    PATH="/opt/local/sbin:${PATH}"
 fi
 if [ -d /opt/local/bin ]; then
-    PATH="/opt/local/bin:$PATH"
+    PATH="/opt/local/bin:${PATH}"
 fi
 
 
 ## LD_LIBRARY_PATH ##
 
-if [ -d "$HOME/lib" ]; then
+if [ -d "${HOME}/lib" ]; then
     # https://stackoverflow.com/a/16296466
     LD_LIBRARY_PATH="${HOME}/lib${LD_LIBRARY_PATH:+:}${LD_LIBRARY_PATH}"
     export LD_LIBRARY_PATH
+fi
+
+
+## CONDA ##
+if [ -r "${CONDA_DIR}/etc/profile.d/conda.sh" ]; then
+    . "${CONDA_DIR}/etc/profile.d/conda.sh"
+    conda activate "${CONDA_DEFAULT_ENV}"
+fi
+
+
+## FSL ##
+if [ -d "${FSLDIR}" ]; then
+    PATH="${FSLDIR}/bin:${PATH}"
+    . "${FSLDIR}/etc/fslconf/fsl.sh"
+    . "${FSLDIR}/etc/fslconf/fsl-devel.sh"
 fi
