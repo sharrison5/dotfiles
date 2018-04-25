@@ -10,9 +10,15 @@
 alias ll='ls -lh'
 
 
+## RSYNC ##
+
+alias rsync='rsync --verbose --human-readable --progress --stats'
+
+
 ## GIT ##
 
 # Status
+alias gs="git status"
 alias gss="git status -s"
 alias gssc="clear; echo "Status:"; gss"
 
