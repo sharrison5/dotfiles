@@ -57,7 +57,7 @@ fi
 # Can assume this is already set
 
 if [ -d "${HOME}/bin" ]; then
-    PATH="${PATH}:${HOME}/bin"
+    PATH="${HOME}/bin:${PATH}"
 fi
 
 # MacPorts
