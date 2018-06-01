@@ -2,6 +2,15 @@
 # Sam Harrison 2018
 # MIT License: a full version of the license is included in the LICENSE file.
 
+# This contains key config that tends to change from machine-to-machine. The
+# variables set here are meant to be available for .profile or .rc files to
+# incorporate into the environment as necessary, rather than this file doing
+# the setup itself.
+
+
+#echo ".machine_specific_config"
+
+
 # For shell prompt
 export MACHINE_NAME='\h'
 

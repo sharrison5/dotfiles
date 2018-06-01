@@ -3,6 +3,9 @@
 # MIT License: a full version of the license is included in the LICENSE file.
 
 
+#echo ".bash_aliases"
+
+
 ## LS ##
 
 #alias ls='ls --color=auto'

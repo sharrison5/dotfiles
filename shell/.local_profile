@@ -5,3 +5,5 @@
 # Use this for running any machine-specific commands after the shell
 # environment has been set up.
 
+
+#echo ".local_profile"
