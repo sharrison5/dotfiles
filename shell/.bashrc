@@ -44,6 +44,14 @@ if [ -r /usr/share/bash-completion/bash_completion ]; then
 fi
 
 
+## CONDA ##
+
+# `conda` is a function so this needs to be sourced every time (not inherited).
+if [ -r "${CONDA_DIR}/etc/profile.d/conda.sh" ]; then
+    . "${CONDA_DIR}/etc/profile.d/conda.sh"
+fi
+
+
 ## HISTORY ##
 
 HISTSIZE=5000

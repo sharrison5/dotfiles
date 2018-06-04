@@ -93,6 +93,8 @@ export EDITOR VISUAL
 
 ## CONDA ##
 
+# This sets the default environment but, annoyingly, `conda` is a function
+# so we need to source conda.sh again for interactive shells.
 if [ -r "${CONDA_DIR}/etc/profile.d/conda.sh" ]; then
     . "${CONDA_DIR}/etc/profile.d/conda.sh"
     conda activate "${CONDA_DEFAULT_ENV}"
