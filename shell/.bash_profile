@@ -31,6 +31,9 @@ fi
 ## INTERACTIVE SESSIONS ##
 
 # Source .bashrc
-if [[ $- == *i* ]] && [ -r "${HOME}/.bashrc" ]; then
-    . "${HOME}/.bashrc"
+if [ -r "${HOME}/.bashrc" ]; then
+    case $- in
+        *i*) . "${HOME}/.bashrc";;
+          *) ;;
+    esac
 fi

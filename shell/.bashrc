@@ -21,7 +21,10 @@
 
 # https://unix.stackexchange.com/q/257571
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+case $- in
+    *i*) ;;
+      *) return;;
+esac
 
 
 ## ALIASES ##
@@ -35,6 +38,9 @@ fi
 
 if [ -r /opt/local/etc/profile.d/bash_completion.sh ]; then
     . /opt/local/etc/profile.d/bash_completion.sh
+fi
+if [ -r /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
 fi
 
 
@@ -65,3 +71,9 @@ else
     MACHINE_COLOUR="${cyan}"
 fi
 PS1="${cyan}\u${cr}${grey}@${cr}${MACHINE_COLOUR}${MACHINE_NAME}${cr}${grey}:\W${cr}${grey_b} \$ ${cr}"
+
+
+## SHELL BEHAVIOUR ##
+
+# Turn on '**' globbing
+shopt -s globstar
