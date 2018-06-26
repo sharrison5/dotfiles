@@ -29,6 +29,10 @@ alias gssc="clear; echo "Status:"; gss"
 alias gd="git diff"
 alias gdc="git diff --cached"
 
+# Add
+alias ga="git add"
+alias gap="git add --patch"
+
 # Logs
 # Short log: hash | date in blue | how long ago | newline | subject | newline
 alias gl='git log --pretty=format:"%h %Cblue%ad%Creset (%ar) %n%s %n" --date=short'
