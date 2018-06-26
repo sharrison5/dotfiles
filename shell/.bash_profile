@@ -9,12 +9,14 @@
 
 # Note that we try and minimise what we place in this file, as it may not
 # be sourced at all! For example, on Ubuntu the default login shell is dash.
-# That means .bash_profile cannot safely be sourced by e.g. Gnome, and we also
-# shouldn't source it from .bashrc (see .profile for an explanation of the
-# different roles these files have).
+# That means .bash_profile cannot safely be sourced by e.g. Gnome (see
+# /etc/gdm/Xsession for what that sources). We also shouldn't source this
+# from .bashrc (see .profile for an explanation of the different roles these
+# files have).
 
 # https://wiki.ubuntu.com/DashAsBinSh
 # https://bugs.launchpad.net/ubuntu/+bug/66004
+# https://askubuntu.com/a/13093
 
 
 #echo ".bash_profile"

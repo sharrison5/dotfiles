@@ -45,6 +45,13 @@
 #echo ".profile"
 
 
+## DEBUG ##
+
+#export PROFILE_SHELL=$SHELL
+#export PROFILE_TIME=$(date)
+#export PROFILE_0=$0
+
+
 ## CONFIG ##
 
 if [ -r "${HOME}/.machine_specific_config" ]; then
