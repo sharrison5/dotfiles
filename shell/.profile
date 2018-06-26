@@ -69,10 +69,10 @@ fi
 
 # MacPorts
 # export PATH="/opt/local/bin:/opt/local/sbin:${PATH}"
-if [ -d /opt/local/sbin ]; then
+if [ -d "/opt/local/sbin" ]; then
     PATH="/opt/local/sbin:${PATH}"
 fi
-if [ -d /opt/local/bin ]; then
+if [ -d "/opt/local/bin" ]; then
     PATH="/opt/local/bin:${PATH}"
 fi
 
@@ -80,8 +80,11 @@ fi
 ## LD_LIBRARY_PATH ##
 
 if [ -d "${HOME}/lib" ]; then
-    # https://stackoverflow.com/a/16296466
-    LD_LIBRARY_PATH="${HOME}/lib${LD_LIBRARY_PATH:+:}${LD_LIBRARY_PATH}"
+    if [ -n "${LD_LIBRARY_PATH}" ]; then
+        LD_LIBRARY_PATH="${HOME}/lib:${LD_LIBRARY_PATH}"
+    else
+        LD_LIBRARY_PATH="${HOME}/lib"
+    fi
     export LD_LIBRARY_PATH
 fi
 

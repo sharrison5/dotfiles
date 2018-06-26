@@ -21,23 +21,22 @@ alias rsync='rsync --verbose --human-readable --progress --stats'
 ## GIT ##
 
 # Status
-alias gs="git status"
-alias gss="git status -s"
-alias gssc="clear; echo "Status:"; gss"
+alias gs='git status'
+alias gss='git status --short'
+alias gssc='clear; echo "Status:"; git status --short'
 
 # Diff
-alias gd="git diff"
-alias gdc="git diff --cached"
+alias gd='git diff'
+alias gdc='git diff --cached'
 
 # Add
-alias ga="git add"
-alias gap="git add --patch"
+alias ga='git add'
+alias gap='git add --patch'
 
 # Logs
-# Short log: hash | date in blue | how long ago | newline | subject | newline
-alias gl='git log --pretty=format:"%h %Cblue%ad%Creset (%ar) %n%s %n" --date=short'
+alias gl='git log'
 # Very short log: hash | date | subject truncated to fit one line
 alias gls='git log --pretty=format:"%h %Cblue%ad%Creset %<(60,trunc)%s" --date=short'
 
 # Merge upstream branch
-alias gmu="git merge --ff-only @{u}"
+alias gmu='git merge --ff-only @{u}'
