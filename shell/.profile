@@ -24,13 +24,6 @@
 # source .*profile* files from .*rc files.
 
 
-## CAVEATS ##
-
-# .profile is for the Bourne shell, and is used as for setting options that
-# we want for all shells (e.g. $PATH and friends). It must therefore be
-# compatible with all /bin/sh variants.
-
-
 ## REFERENCES ##
 
 # http://mywiki.wooledge.org/DotFiles
@@ -40,6 +33,17 @@
 # https://superuser.com/a/183980
 # https://unix.stackexchange.com/a/129144
 # https://askubuntu.com/a/132319
+
+
+## CAVEATS ##
+
+# .profile is for the Bourne shell, and is used as for setting options that
+# we want for all shells (e.g. $PATH and friends). It must therefore be
+# compatible with all /bin/sh variants.
+
+# http://mywiki.wooledge.org/Bashism
+# https://unix.stackexchange.com/a/369061
+# https://wiki.ubuntu.com/DashAsBinSh
 
 
 #echo ".profile"
@@ -81,24 +85,21 @@ fi
 
 if [ -d "${HOME}/lib" ]; then
     if [ -n "${LD_LIBRARY_PATH}" ]; then
-        LD_LIBRARY_PATH="${HOME}/lib:${LD_LIBRARY_PATH}"
+        export LD_LIBRARY_PATH="${HOME}/lib:${LD_LIBRARY_PATH}"
     else
-        LD_LIBRARY_PATH="${HOME}/lib"
+        export LD_LIBRARY_PATH="${HOME}/lib"
     fi
-    export LD_LIBRARY_PATH
 fi
 
 
 ## EDITORS ETC ##
 
 # Used to show output a screen at a time
-PAGER=less
-export PAGER
+export PAGER=less
 
 # Prefered editor for text files
-EDITOR=vim
-VISUAL="${EDITOR}"
-export EDITOR VISUAL
+export EDITOR=vim
+export VISUAL="${EDITOR}"
 
 
 ## CONDA ##
