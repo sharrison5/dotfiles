@@ -47,8 +47,12 @@ fi
 ## CONDA ##
 
 # `conda` is a function so this needs to be sourced every time (not inherited).
-if [ -r "${CONDA_DIR}/etc/profile.d/conda.sh" ]; then
-    . "${CONDA_DIR}/etc/profile.d/conda.sh"
+if [ -n "${CONDA_DIR}" ]; then
+    if [ -r "${CONDA_DIR}/etc/profile.d/conda.sh" ]; then
+        . "${CONDA_DIR}/etc/profile.d/conda.sh"
+    else
+        echo ".bashrc: \$CONDA_DIR set but could not source conda.sh!" 1>&2
+    fi
 fi
 
 
