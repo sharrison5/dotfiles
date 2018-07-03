@@ -5,7 +5,6 @@ workflow I tend to use. See below for a list of more comprehensive, and
 better, references.
 
 ##### Useful links
-
 The [Git Reference Manual](https://git-scm.com/docs) and the
 [Pro Git book](https://www.git-scm.com/book/en/v2) are the canonical
 references, though they can be a little
@@ -17,6 +16,11 @@ and [here](https://services.github.com/on-demand/downloads/github-git-cheat-shee
 Finally, '[Git from the bottom up](http://newartisans.com/2008/04/git-from-the-bottom-up/)'
 is an excellent overview of Git's internals, or if you just want something
 completely different try [here](http://stevelosh.com/blog/2013/04/git-koans/).
+
+##### Syntax
+```
+command [--option_A|--or_B] --argument <value_to_be_specified>
+```
 
 --------------------
 
@@ -47,7 +51,7 @@ for useful collections of these rules.
 
 I tend to use
 [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/), though
-YMMV. One of the key features which I tend to use even if not sticking to the
+YMMV. One of the key features which I typically use even if not sticking to the
 full-fat version is to use `git merge --no-ff` to preserve branch information.
 Of course, you could also set `git config --global merge.ff only`.
 
@@ -59,7 +63,7 @@ body to explain *what* and *why*.
 
 --------------------
 
-### Geting started
+### Getting started
 
 ```
 cd <project/>
@@ -76,7 +80,7 @@ Do some commits, and then:
 git push [-u|--set-upstream] origin [<branch>|--all]
 ```
 
-###### SSH Keys
+##### SSH Keys
 That should have us up and running, but we typically want to add SSH keys to
 streamline the process of interacting with the server. Generate the key
 using e.g.:
