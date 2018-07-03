@@ -1,4 +1,4 @@
-Sat 14 Apr 2018 20:37:32 CEST
+Tue  3 Jul 2018 10:29:50 CEST
 armadillo
 bash
 bash-completion
@@ -16,6 +16,7 @@ sloccount
 sshfs
 stow
 tclap
+testdisk
 tree
 watch
 wget
