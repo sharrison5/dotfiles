@@ -103,6 +103,59 @@ git remote set-url origin <ssh://git@git.com:me/project.git>
 
 --------------------
 
+### Workhorse local commands
+
+```
+git diff [--cached] [<file>]
+git add [-p|--patch] [-N|--intent-to-add] [<file>]
+git status [-s|--short]
+git commit [-m "<Commit message>"]
+git log [--graph]
+```
+
+--------------------
+
+### Branching
+
+```
+# List branches
+git branch [-v|--verbose]
+
+# Switch (usually want to stash first)
+git checkout <branch>
+
+# Create new branch
+git branch <branch> [<start-point>]
+# Create and switch
+git checkout -b <branch> [<start-point>]
+
+# Merge into current branch
+git merge [--no-ff] [--no-commit] <branch>
+
+# Delete
+git branch [-d|--delete] <branch>
+```
+
+--------------------
+
+### Stashing
+
+```
+# Stash changes
+git stash [-p|--patch]
+
+# Show stashes
+git stash list
+
+# Contents of stash
+git stash show [-p|--patch] <stash@{0}>
+
+# Restore a stash
+git stash pop <stash@{0}>
+```
+
+--------------------
+
 ###### Colophon
 Sam Harrison, 2018, MIT License.
 A full version of the license is included in the LICENSE file.
