@@ -7,25 +7,45 @@
 
 set encoding=utf-8
 
-syntax enable
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+" Spaces v tabs / indentation
 
-set expandtab      " Spaces are tabs
-set softtabstop=4  " Pressing tab inserts four spaces
-set tabstop=4      " Tabs look like four spaces
-set shiftwidth=4   " Spaces for auto-indent
+set expandtab softtabstop=4  " Pressing tab inserts 4 spaces
+set tabstop=4       " Any existing tabs look like four spaces
+set shiftwidth=4    " Number of spaces used for auto-indent
+
+set autoindent      " Copy indentation from previous line, unless...
+filetype indent on  " More specific indentation based on filetype
+
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+" Editor appearance
+
+syntax enable   " Turn on syntax highlighting
+
+colorscheme lucius
+" Lucius[Black|Dark|Light|White][HighContrast|LowContrast]
+LuciusWhiteLowContrast
+
+set cursorline  " Highlight current line
+"set number     " Show line numbers
+
+set showmatch   " Highlight matching brackets
 
 " Highlight tabs and trailing whitespace
 " https://vi.stackexchange.com/a/423
 set list
 set listchars=tab:├─,trail:·
 
-"set number  " show line numbers
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+" Vim behaviour
 
-set autoindent
-filetype indent on  " Indentation based on filetype
+set showcmd  " Show partial commands in bottom right corner
 
-colorscheme lucius
-LuciusWhiteLowContrast  " Lucius[Black|Dark|Light|White][HighContrast|LowContrast]
+" Enable interactive display of command autocompletion options
+set wildmenu
+" First tab press expands to longest common string
+" Subsequent tabs then cycle through options
+set wildmode=longest:full,full
 
-set cursorline  " Highlight current line
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
