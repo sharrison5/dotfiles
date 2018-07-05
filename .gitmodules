@@ -1,3 +1,6 @@
 [submodule "vim/.vim/colors/vim-lucius"]
 	path = vim/.vim/colors/vim-lucius
 	url = https://github.com/jonathanfilip/vim-lucius.git
+[submodule "vim/.vim/colors/summerfruit256"]
+	path = vim/.vim/colors/summerfruit256
+	url = https://github.com/SimonGreenhill/summerfruit256.vim.git

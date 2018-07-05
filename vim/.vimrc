@@ -18,13 +18,20 @@ set autoindent      " Copy indentation from previous line, unless...
 filetype indent on  " More specific indentation based on filetype
 
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-" Editor appearance
+" Colours!
+" http://vimcolors.com
+" https://github.com/noah/vim256-color
 
 syntax enable   " Turn on syntax highlighting
 
 colorscheme lucius
 " Lucius[Black|Dark|Light|White][HighContrast|LowContrast]
 LuciusWhiteLowContrast
+
+"colorscheme summerfruit256
+
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+" Editor appearance
 
 set cursorline  " Highlight current line
 "set number     " Show line numbers
