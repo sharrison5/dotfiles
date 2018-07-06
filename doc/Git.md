@@ -87,7 +87,14 @@ using e.g.:
 ```
 ssh-keygen -t rsa -C "<example@email.com> <description>" -b 4096
 ```
-Save it to e.g. `~/.ssh/id_rsa_<description>`. Copy the **public** key
+For the `<description>`, it is useful to know both the origin and destination
+of the connection. As `~/.ssh/authorized_keys` contains the public keys, the
+description should uniquely identify the connecting machine. Similarly, it
+seems better-safe-than-sorry to include the destination for identifying the
+keys on the origin machine. Therefore `<origin> <destination>` seems
+sensible, where e.g. the hostnames could be used.
+
+Save the keys to e.g. `~/.ssh/id_rsa_<destination>`. Copy the **public** key
 (`.pub`) to the server, and then modify `~/.ssh/config` as follows:
 ```
 # Git server
