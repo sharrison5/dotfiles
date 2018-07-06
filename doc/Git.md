@@ -156,6 +156,51 @@ git stash pop <stash@{0}>
 
 --------------------
 
+### Submodules
+
+The simplest job is probably just to get a repository that contains
+submodules:
+```
+git clone --recurse-submodules [-j|--jobs <n>] <repository>
+```
+Note that for older versions of git, `--recurse-submodules` needs to be
+replaced with `--recursive`.
+
+Internally, git stores submodules as a URL, a local path, and a specific
+commit. However, this information is typically stored in both `.gitmodules`
+and `.git/config`. The former is the copy of record that is included within
+the repository, whereas the latter contains any local changes (which allows
+you to specify different URLs, ignore some submodules temporarily etc). The
+`init` and `sync` commands deal with moving information between the two.
+
+The rest of the commands deal with managing submodules within a
+project, but don't deal with how to make changes to the submodules too.
+```
+# Update submodules (i.e. checkout specified commit)
+# `--init` can be used instead of `git submodule init`
+# `--recursive` means apply to submodules of submodules too
+git submodule update [--init] [--recursive] [-j|--jobs <n>]
+
+# Add to project, with optional location (or if already cloned locally)
+git submodule add <repository> [<path/to/repository>]
+
+# See changes
+git submodule status [--recursive]
+git diff [--submodule[=<short|log|diff>]]
+
+# Update URLs
+git submodule sync [--recursive]
+
+# Apply a command to each submodule (e.g. `<command>="git fetch"`)
+git submodule foreach [--recursive] <command>
+```
+
+To update a submodule to a different commit, it's probably simplest to just
+`cd` into the submodule and manually checkout the required commit rather than
+automating everything.
+
+--------------------
+
 ###### Colophon
 Sam Harrison, 2018, MIT License.
 A full version of the license is included in the LICENSE file.
