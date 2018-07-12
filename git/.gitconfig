@@ -12,6 +12,8 @@
 [core]
 	attributesfile = ~/.gitattributes
 	excludesfile = ~/.gitignore
+	# Trim long lines when paging
+	pager = less -S
 
 [diff]
 	# Better prefixes than a/ b/
