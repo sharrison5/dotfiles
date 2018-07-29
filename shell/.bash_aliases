@@ -10,6 +10,7 @@
 
 #alias ls='ls --color=auto'
 #alias ls='ls -G'
+alias la='ls -a'
 alias ll='ls -lah'
 
 
@@ -38,6 +39,9 @@ alias gdc='git diff --cached'
 # Add
 alias ga='git add'
 alias gap='git add --patch'
+
+# Commit
+alias gc='git commit'
 
 # Logs
 alias gl='git log'
