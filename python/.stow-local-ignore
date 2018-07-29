@@ -1,0 +1,7 @@
+# .stow-local-ignore
+# Sam Harrison 2018
+# MIT License: a full version of the license is included in the LICENSE file.
+
+# https://www.gnu.org/software/stow/manual/html_node/Types-And-Syntax-Of-Ignore-Lists.html
+
+^/README.*

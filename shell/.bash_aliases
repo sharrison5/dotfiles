@@ -18,6 +18,12 @@ alias ll='ls -lah'
 alias rsync='rsync --verbose --human-readable --progress --stats'
 
 
+## PYTHON ##
+
+alias ipy='ipython'
+alias ipylab='ipython --profile=basics --matplotlib'
+
+
 ## GIT ##
 
 # Status
