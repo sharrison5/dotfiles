@@ -62,9 +62,10 @@ set showcmd       " Show partial commands in bottom right corner
 set laststatus=2  " Always show the status line
 " http://learnvimscriptthehardway.stevelosh.com/chapters/17.html
 " https://got-ravings.blogspot.com/2008/08/vim-pr0n-making-statuslines-that-own.html
+" Basic syntax: %-0{minwid}.{maxwid}{item}
 set statusline=
 set statusline+=\ %n)       " Buffer number
-set statusline+=\ %f        " Path to file
+set statusline+=\ %.30f     " Path to file (truncated to 30 chars)
 set statusline+=\ %y        " [filetype]
 set statusline+=\ [         " [encoding, modifiable, read only]
 set statusline+=%{(&fenc!=''?&fenc:&enc)}
@@ -72,7 +73,7 @@ set statusline+=%M
 set statusline+=%R
 set statusline+=]
 set statusline+=%=          " Switch to right-hand side
-set statusline+=%l/%L:%c\   " Current/total lines : column
+set statusline+=%l/%L:%-2c\ " Current/total lines : column
 
 " Enable interactive display of command autocompletion options
 set wildmenu
