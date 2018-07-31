@@ -3,10 +3,11 @@
 " MIT License: a full version of the license is included in the LICENSE file
 
 " References
+" http://vim.wikia.com/wiki/Vim_Tips_Wiki
 " https://dougblack.io/words/a-good-vimrc.html
 
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-" Text-based options
+" Text-based options {{{
 
 set encoding=utf-8
 
@@ -14,8 +15,9 @@ set encoding=utf-8
 "set spell
 set spelllang=en_gb
 
+" }}}
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-" Spaces v tabs / indentation
+" Spaces v tabs / indentation {{{
 
 set expandtab softtabstop=4  " Pressing tab inserts 4 spaces
 set shiftwidth=4    " Number of spaces used for auto-indent
@@ -26,8 +28,9 @@ filetype on         " Detect filetype
 filetype plugin on  " Tweak editor behaviour based on filetype
 filetype indent on  " And use file-specific indentation behaviour
 
+" }}}
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-" Colours!
+" Colours! {{{
 " http://vimcolors.com
 " https://github.com/noah/vim256-color
 
@@ -39,8 +42,9 @@ LuciusWhiteLowContrast
 
 "colorscheme summerfruit256
 
+" }}}
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-" Editor appearance
+" Editor appearance {{{
 
 set nowrap      " Long lines don't break
 
@@ -54,8 +58,9 @@ set showmatch   " Highlight matching brackets
 set list
 set listchars=tab:├─,trail:·
 
+" }}}
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-" Vim behaviour
+" Vim behaviour {{{
 
 set showcmd       " Show partial commands in bottom right corner
 
@@ -81,8 +86,18 @@ set wildmenu
 " Subsequent tabs then cycle through options
 set wildmode=longest:full,full
 
+" }}}
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-" Searching
+" Folding {{{
+
+set foldenable          " Turn on folds
+set foldmethod=marker   " Fold based on three sets of curly braces
+set foldlevelstart=0    " All folds closed to start with
+set foldminlines=0      " Close all folds, even if single-line
+
+" }}}
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+" Searching {{{
 
 set ignorecase  " Case-insensitive...
 set smartcase   " ...except when the search string contains upper case
@@ -90,4 +105,5 @@ set smartcase   " ...except when the search string contains upper case
 set hlsearch    " Highlight matches (clear highlights with `:noh[lsearch]`)
 set incsearch   " Start matching while typing
 
+" }}}
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
