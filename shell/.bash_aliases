@@ -2,6 +2,16 @@
 # Sam Harrison 2018
 # MIT License: a full version of the license is included in the LICENSE file.
 
+# Use `alias` to list defined aliases
+
+# To check for name collisions with built-ins/commands/keywords:
+# compgen -bck | sort | less
+# https://stackoverflow.com/a/949006
+
+# Aliases in single quotes by default: we typically want to evaluate
+# variables within them when used, rather than when declared.
+# This is also consistent with the `alias` command.
+
 
 #echo ".bash_aliases"
 
