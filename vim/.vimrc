@@ -82,4 +82,12 @@ set wildmenu
 set wildmode=longest:full,full
 
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+" Searching
 
+set ignorecase  " Case-insensitive...
+set smartcase   " ...except when the search string contains upper case
+
+set hlsearch    " Highlight matches (clear highlights with `:noh[lsearch]`)
+set incsearch   " Start matching while typing
+
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
