@@ -8,9 +8,25 @@
 " Options that affect the behaviour / performance of Vim, but that do not
 " directly impact the editing workflow.
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+" Vi compatibility {{{
+
+" This is already set at startup if a .vimrc is found, but gives more sane
+" behaviour when re-sourcing the file.
+set nocompatible
+
+" }}}
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+" Performance {{{
+
+set lazyredraw  " Don't redraw quite so often (e.g. during macros)
+
+" }}}
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 " Text-based options {{{
 
 set encoding=utf-8
+
+"set autoread  " Update buffers with external changes if unmodified
 
 " }}}
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -28,6 +44,12 @@ set wildmenu
 " First tab press expands to longest common string
 " Subsequent tabs then cycle through options
 set wildmode=longest:full,full
+
+" }}}
+" - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+" Movement {{{
+
+set scrolloff=3  " Always keep a few lines above/below cursor
 
 " }}}
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -85,6 +107,7 @@ set nowrap      " Long lines don't break
 
 set cursorline  " Highlight current line
 "set number     " Show line numbers
+"set relativenumber
 
 set showmatch   " Highlight matching brackets
 
@@ -137,4 +160,5 @@ set statusline+=%l/%L:%-2c\  " Current/total lines : column
 
 " References
 " http://vim.wikia.com/wiki/Vim_Tips_Wiki
+" http://vim.wikia.com/wiki/Example_vimrc
 " https://dougblack.io/words/a-good-vimrc.html
