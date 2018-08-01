@@ -9,6 +9,7 @@
 
 import math
 import numpy
+import scipy, scipy.stats
 
 # Best to invoke ipython with the `--matplotlib` flag too
 # https://ipython.readthedocs.io/en/stable/interactive/reference.html#matplotlib-support
