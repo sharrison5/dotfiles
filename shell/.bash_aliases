@@ -58,5 +58,9 @@ alias gl='git log'
 # Very short log: hash | date | subject truncated to fit one line
 alias gls='git log --pretty=format:"%h %Cblue%ad%Creset %<(60,trunc)%s" --date=short'
 
+# Branching
+alias gb='git branch'
+alias gba='git branch --all --verbose --verbose'
+
 # Merge upstream branch
 alias gmu='git merge --ff-only @{u}'

@@ -113,20 +113,20 @@ git remote set-url origin <ssh://git@git.com:me/project.git>
 ### Workhorse local commands
 
 ```
+git status [-s|--short]
 git diff [--cached] [<file>]
 git add [-p|--patch] [-N|--intent-to-add] [<file>]
-git status [-s|--short]
 git commit [-m "<Commit message>"]
 git log [--graph]
 ```
 
 --------------------
 
-### Branching
+### Local branching
 
 ```
 # List branches
-git branch [-v|--verbose]
+git branch [-a|--all] [-v[v]|--verbose]
 
 # Switch (usually want to stash first)
 git checkout <branch>
