@@ -16,9 +16,15 @@ set nocompatible
 
 " }}}
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-" Performance {{{
+" Performance / config {{{
 
 set lazyredraw  " Don't redraw quite so often (e.g. during macros)
+
+set history=200 " Keep more command line history
+
+" Allows files to set local Vim options
+" Disable for security reasons, and don't want editor config in source code
+set nomodeline
 
 " }}}
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
