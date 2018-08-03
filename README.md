@@ -19,6 +19,14 @@ relevant documentation is linked below:
 
 --------------------
 
+### Documentation
+
+There are a few guides in the `doc/` folder:
+ + [Git](doc/Git.md)
+ + [MacPorts](doc/MacPorts.md)
+
+--------------------
+
 ### Stow Installation
 
 ```
