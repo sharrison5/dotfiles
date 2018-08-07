@@ -126,7 +126,7 @@ git log [--graph]
 
 ```
 # List branches
-git branch [-a|--all] [-v[v]|--verbose]
+git branch [-v[v]|--verbose]
 
 # Switch (usually want to stash first)
 git checkout <branch>
@@ -159,6 +159,68 @@ git stash show [-p|--patch] <stash@{0}>
 
 # Restore a stash
 git stash pop <stash@{0}>
+```
+
+--------------------
+
+### Working with remote repositories
+
+```
+### Setting up remotes
+
+# <remote> is the local name of the remote
+# <url> can be HTTP, SSH, etc
+
+# List/inspect remotes
+git remote [-v|--verbose]
+git remote show <remote>
+git branch [-a|--all] [-v[v]|--verbose]
+
+# Add/modify remotes
+git remote add <remote> <url>
+git remote set-url <remote> <url>
+
+
+### Working with them
+
+# Get changes
+git fetch [--verbose] [<remote>|--all]
+
+# Merge changes to this branch if fast-forwardable
+git merge --ff-only @{upstream}
+# If this fails, will need to do a proper merge or rebase
+git merge @{upstream}
+git rebase [--rebase-merges] @{upstream}
+# Note `--rebase-merges` may need replacing with `--preserve-merges`
+
+# Push changes to the remote
+git push [--follow-tags] <remote> [<branch>|--all]
+
+
+### Branch management
+
+# Creating branches from remote versions
+# Note that `--track` is the default and can be omitted
+git branch [--track] <branch> <remote/start-point>
+# Also, Git conveniently makes the following two commands equivalent if
+# <branch> does not exist locally but does on one remote
+git checkout <branch>
+git checkout -b <branch> --track <remote/branch>
+
+# Adding tracking to extant local branches
+git push --set-upstream <remote> [<branch>|--all]
+git branch --set-upstream-to=<upstream> [<branch>]
+
+
+### Housekeeping
+
+git remote remove <remote>
+
+# Delete remote branch
+git push <remote> --delete <branch>
+
+# Remove local copies of e.g. branches that have been deleted from the remote
+git remote prune [--dry-run] <remote>
 ```
 
 --------------------
