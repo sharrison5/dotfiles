@@ -72,7 +72,7 @@ git remote add origin <git@git.com:me/project.git>
 ```
 or
 ```
-git clone [--recursive] <git@git.com:me/project.git>
+git clone [--recurse-submodules] <git@git.com:me/project.git>
 cd <project/>
 ```
 Do some commits, and then:
@@ -140,7 +140,7 @@ git checkout -b <branch> [<start-point>]
 git merge [--no-ff] [--no-commit] <branch>
 
 # Delete
-git branch [-d|--delete] <branch>
+git branch -d|--delete <branch>
 ```
 
 --------------------

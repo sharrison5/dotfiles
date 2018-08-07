@@ -8,7 +8,7 @@ Management is via [Stow](https://www.gnu.org/software/stow/).
 ### Usage
 
 ```
-git clone --recursive https://github.com/sharrison5/dotfiles.git
+git clone --recurse-submodules https://github.com/sharrison5/dotfiles.git
 cd dotfiles/
 stow [--target="$HOME"] <package>
 ```
