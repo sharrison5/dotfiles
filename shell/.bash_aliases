@@ -62,5 +62,20 @@ alias gls='git log --pretty=format:"%h %Cblue%ad%Creset %<(60,trunc)%s" --date=s
 alias gb='git branch'
 alias gba='git branch --all --verbose --verbose'
 
+# Stashing
+alias gs='git stash'
+alias gsl='git stash list'
+
+# Remotes
+alias gr='git remote'
+alias grv='git remote --verbose'
+alias grs='git remote show'
+
+# Fetching
+alias gf='git fetch --verbose'
 # Merge upstream branch
-alias gmu='git merge --ff-only @{u}'
+alias gmu='git merge --ff-only @{upstream}'
+
+# Pushing
+alias gp='git push --verbose'
+alias gpt='git push --verbose --follow-tags'
