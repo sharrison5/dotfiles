@@ -165,40 +165,46 @@ git stash pop <stash@{0}>
 
 ### Working with remote repositories
 
+##### Setting up remotes
+
+`<remote>` is the local name for the remote repository and `<url>` can
+be HTTP, SSH, etc.
+
 ```
-### Setting up remotes
-
-# <remote> is the local name of the remote
-# <url> can be HTTP, SSH, etc
-
 # List/inspect remotes
 git remote [-v|--verbose]
 git remote show <remote>
-git branch [-a|--all] [-v[v]|--verbose]
 
 # Add/modify remotes
 git remote add <remote> <url>
 git remote set-url <remote> <url>
+```
 
+##### Basic workflow
 
-### Working with them
-
+```
 # Get changes
 git fetch [--verbose] [<remote>|--all]
+
+# Look at branches
+git branch [-a|--all] [-r|--remotes] [-v[v]|--verbose]
 
 # Merge changes to this branch if fast-forwardable
 git merge --ff-only @{upstream}
 # If this fails, will need to do a proper merge or rebase
 git merge @{upstream}
 git rebase [--rebase-merges] @{upstream}
-# Note `--rebase-merges` may need replacing with `--preserve-merges`
 
 # Push changes to the remote
 git push [--follow-tags] <remote> [<branch>|--all]
+```
 
+Note that `--rebase-merges` may need replacing with `--preserve-merges` for
+older verions of Git.
 
-### Branch management
+##### Branch management
 
+```
 # Creating branches from remote versions
 # Note that `--track` is the default and can be omitted
 git branch [--track] <branch> <remote/start-point>
@@ -210,10 +216,11 @@ git checkout -b <branch> --track <remote/branch>
 # Adding tracking to extant local branches
 git push --set-upstream <remote> [<branch>|--all]
 git branch --set-upstream-to=<upstream> [<branch>]
+```
 
+##### Housekeeping
 
-### Housekeeping
-
+```
 git remote remove <remote>
 
 # Delete remote branch
