@@ -125,7 +125,7 @@ git log [--graph]
 ### Local branching
 
 ```
-# List branches
+# List branches
 git branch [-v[v]|--verbose]
 
 # Switch (usually want to stash first)
@@ -157,7 +157,7 @@ git stash list
 # Contents of stash
 git stash show [-p|--patch] <stash@{0}>
 
-# Restore a stash
+# Restore a stash
 git stash pop <stash@{0}>
 ```
 
@@ -165,13 +165,13 @@ git stash pop <stash@{0}>
 
 ### Working with remote repositories
 
-##### Setting up remotes
+##### Setting up remotes
 
 `<remote>` is the local name for the remote repository and `<url>` can
 be HTTP, SSH, etc.
 
 ```
-# List/inspect remotes
+# List/inspect remotes
 git remote [-v|--verbose]
 git remote show <remote>
 
@@ -195,7 +195,7 @@ git merge --ff-only @{upstream}
 git merge @{upstream}
 git rebase [--rebase-merges] @{upstream}
 
-# Push changes to the remote
+# Push changes to the remote
 git push [--follow-tags] <remote> [<branch>|--all]
 ```
 
@@ -213,7 +213,7 @@ git branch [--track] <branch> <remote/start-point>
 git checkout <branch>
 git checkout -b <branch> --track <remote/branch>
 
-# Adding tracking to extant local branches
+# Adding tracking to extant local branches
 git push --set-upstream <remote> [<branch>|--all]
 git branch --set-upstream-to=<upstream> [<branch>]
 ```
@@ -226,7 +226,7 @@ git remote remove <remote>
 # Delete remote branch
 git push <remote> --delete <branch>
 
-# Remove local copies of e.g. branches that have been deleted from the remote
+# Remove local copies of e.g. branches that have been deleted from the remote
 git remote prune [--dry-run] <remote>
 ```
 
@@ -252,7 +252,7 @@ you to specify different URLs, ignore some submodules temporarily etc). The
 The rest of the commands deal with managing submodules within a
 project, but don't deal with how to make changes to the submodules too.
 ```
-# Update submodules (i.e. checkout specified commit)
+# Update submodules (i.e. checkout specified commit)
 # `--init` can be used instead of `git submodule init`
 # `--recursive` means apply to submodules of submodules too
 git submodule update [--init] [--recursive] [-j|--jobs <n>]
