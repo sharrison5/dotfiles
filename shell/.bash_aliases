@@ -63,8 +63,8 @@ alias gb='git branch'
 alias gba='git branch --all --verbose --verbose'
 
 # Stashing
-alias gs='git stash'
-alias gsl='git stash list'
+alias gsta='git stash'
+alias gstl='git stash list'
 
 # Remotes
 alias gr='git remote'

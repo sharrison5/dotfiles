@@ -149,7 +149,7 @@ git branch -d|--delete <branch>
 
 ```
 # Stash changes
-git stash [-p|--patch]
+git stash [-p|--patch] [--keep-index] [-- <files...>]
 
 # Show stashes
 git stash list
