@@ -114,8 +114,8 @@ git remote set-url origin <ssh://git@git.com:me/project.git>
 
 ```
 git status [-s|--short]
-git diff [--cached] [<file>]
-git add [-p|--patch] [-N|--intent-to-add] [<file>]
+git diff [--cached] [-- <files>]
+git add [-p|--patch] [-N|--intent-to-add] [-- <files>]
 git commit [-m "<Commit message>"]
 git log [--graph]
 ```
@@ -128,7 +128,7 @@ git log [--graph]
 # List branches
 git branch [-v[v]|--verbose]
 
-# Switch (usually want to stash first)
+# Switch (may want to stash first)
 git checkout <branch>
 
 # Create new branch
@@ -149,7 +149,7 @@ git branch -d|--delete <branch>
 
 ```
 # Stash changes
-git stash [-p|--patch] [--keep-index] [-- <files...>]
+git stash [-p|--patch] [--keep-index] [-- <files>]
 
 # Show stashes
 git stash list
@@ -166,7 +166,6 @@ git stash pop <stash@{0}>
 ### Working with remote repositories
 
 ##### Setting up remotes
-
 `<remote>` is the local name for the remote repository and `<url>` can
 be HTTP, SSH, etc.
 
@@ -181,7 +180,6 @@ git remote set-url <remote> <url>
 ```
 
 ##### Basic workflow
-
 ```
 # Get changes
 git fetch [--verbose] [<remote>|--all]
@@ -203,7 +201,6 @@ Note that `--rebase-merges` may need replacing with `--preserve-merges` for
 older verions of Git.
 
 ##### Branch management
-
 ```
 # Creating branches from remote versions
 # Note that `--track` is the default and can be omitted
@@ -219,7 +216,6 @@ git branch --set-upstream-to=<upstream> [<branch>]
 ```
 
 ##### Housekeeping
-
 ```
 git remote remove <remote>
 
@@ -280,7 +276,6 @@ automating everything.
 ### Fixing things!
 
 ##### Manipulating uncommited changes
-
 Both dealing with local changes to files and modifying changes rely heavily on
 `checkout` and `reset`. The [Atlassian guide](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
 covers these well.
