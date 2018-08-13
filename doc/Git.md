@@ -310,7 +310,7 @@ For unpublished changes, we have more freedom. Git makes it particularly easy
 to tweak the last commit:
 ```
 # Redo the last commit, including any newly staged changes
-`git commit --amend [--no-edit] [--reset-author]`
+git commit --amend [--no-edit] [--reset-author]
 ```
 
 If we want to more drastically rework things we can use `reset`. This moves the
