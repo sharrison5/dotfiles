@@ -277,6 +277,78 @@ automating everything.
 
 --------------------
 
+### Fixing things!
+
+##### Manipulating uncommited changes
+
+Both dealing with local changes to files and modifying changes rely heavily on
+`checkout` and `reset`. The [Atlassian guide](https://www.atlassian.com/git/tutorials/resetting-checking-out-and-reverting)
+covers these well.
+
+In short, when given a file `reset` will modify the index whereas `checkout`
+will modify the working directory. However, when working at the commit-level,
+`reset` will discard changes or old commits whereas `checkout` will simply
+switch between them.
+
+```
+# Reset index (i.e. opposite of git add)
+git reset [-p|--patch] [-- <files>]
+
+# Overwrite local changes with index
+git checkout [-p|--patch] -- <files>
+
+# Overwrite local changes (and index) with previous commit
+# HEAD can be replaced by any commit
+git checkout [-p|--patch] HEAD -- <files>
+```
+
+##### Modifying commit history
+Be very careful! If changes have been pushed to a remote (or, worse, if others
+have fetched them) then modifying the commit history is a nightmare.  In that
+case, we probbaly want to `revert`, which adds new commits that simply undo the
+precious changes:
+```
+git revert <commits>
+```
+
+For unpublished changes, we have more freedom. Git makes it particularly easy
+to tweak the last commit:
+```
+# Redo the last commit, including any newly staged changes
+`git commit --amend [--no-edit] [--reset-author]`
+```
+
+If we want to more drastically rework things we can use `reset`. This moves the
+branch head back to a specified commit (thereby rendering the future commits
+inaccessible).
+```
+git reset [--soft] HEAD~1
+```
+This keeps the files as they are locally, so essentially undos any commits
+without losing the changes to the files. The `--soft` flag even preserves
+changes to the index, so essentially drops us to right before running `git
+commit`.
+
+Finally, we may want to alter a commit further back in time, but keep the main
+thrust of the development work. An interactive rebase allows us to do just
+this: tweak past commits but keep the overall sequence (if we want: we can also
+reorder or delete commits).
+```
+# Specify parent of commit to edit (this edits past 3 commits)
+git rebase -i|--interactive HEAD~3
+
+# Choose commits to reword/edit/etc from given list in editor
+
+# Make and add changes to files, if any required
+
+git commit --amend
+git rebase --continue
+```
+See the [section in the Git Book](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
+for a good guide to this process.
+
+--------------------
+
 ###### Colophon
 Sam Harrison, 2018, MIT License.
 A full version of the license is included in the [LICENSE file](../LICENSE).
