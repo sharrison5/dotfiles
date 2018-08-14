@@ -75,11 +75,3 @@ alias gmu='git merge --ff-only @{upstream}'
 # Pushing
 alias gp='git push --verbose'
 alias gpt='git push --verbose --follow-tags'
-
-# Stashing
-alias gsta='git stash'
-alias gstl='git stash list'
-
-# Resetting
-alias gres='git reset'
-alias gresp='git reset --patch'
