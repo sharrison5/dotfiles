@@ -49,11 +49,11 @@ for useful collections of these rules.
 
 ### General workflow
 
-I tend to use
-[Git Flow](https://nvie.com/posts/a-successful-git-branching-model/), though
-YMMV. One of the key features which I typically use even if not sticking to the
-full-fat version is to use `git merge --no-ff` to preserve branch information.
-Of course, you could also set `git config --global merge.ff only`.
+I tend to use [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/)
+for larger projects, though YMMV. One of the key features which I typically use
+even if not sticking to the full-fat version is to use `git merge --no-ff` to
+preserve branch information.  Of course, you could also set
+`git config --global merge.ff only`.
 
 Otherwise, good commit messages help! See
 [this article](https://chris.beams.io/posts/git-commit/) for an overview,
@@ -303,7 +303,7 @@ have fetched them) then modifying the commit history is a nightmare.  In that
 case, we probbaly want to `revert`, which adds new commits that simply undo the
 precious changes:
 ```
-git revert <commits>
+git revert [-n|--no-commit] <commits>
 ```
 
 For unpublished changes, we have more freedom. Git makes it particularly easy
@@ -340,7 +340,8 @@ git commit --amend
 git rebase --continue
 ```
 See the [section in the Git Book](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
-for a good guide to this process.
+or the [GitHub Blog](https://blog.github.com/2015-06-08-how-to-undo-almost-anything-with-git/)
+for a good guide to these processes.
 
 ##### Resolving conflicts
 Sometimes, you just have an ["Oh shit, git!"](http://ohshitgit.com/) moment...
