@@ -342,6 +342,55 @@ git rebase --continue
 See the [section in the Git Book](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History)
 for a good guide to this process.
 
+##### Resolving conflicts
+Sometimes, you just have an ["Oh shit, git!"](http://ohshitgit.com/) moment...
+Typically, this is when a stash/merge/rebase fails due to some conflicts, but
+there are plenty of other pitfalls.
+
+The general system for resolving conflicts is:
+```
+git status
+
+# Then either:
+# 1) Manually modify files and add to mark as resolved
+edit <files>
+git add -- <files>
+# 2) Or if we just want to keep one of the versions
+git checkout --ours|--theirs -- <files>
+
+# And crack on
+git merge|rebase --continue
+# Note that `git commit` will also work in the merge case
+```
+Note that if things really go south there is the option to start again with
+`git merge|rebase --abort`.
+
+The procedure for sorting out a failed `stash pop` is similar:
+```
+git stash pop [stash@{0}]
+
+# Resolve conflicts (as above)
+
+# And then reset the index (i.e. undo the git add)
+git reset [-- <files>]
+
+# Git does not remove the old stash if there are errors applying, so need
+# to do it manually
+git stash drop [stash@{0}]
+```
+
+Finally, applying two stashes at once can be tricky, as Git doesn't let you
+apply stashes with a dirty working directory. A solution is:
+```
+# Add all local changes to index
+git add -u|--update
+
+git stash pop [stash@{0}]
+
+# And then remove files from the index
+git reset
+```
+
 --------------------
 
 ###### Colophon
