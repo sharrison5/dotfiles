@@ -114,7 +114,7 @@ git remote set-url origin <ssh://git@git.com:me/project.git>
 
 ```
 git status [-s|--short]
-git diff [--cached] [-- <files>]
+git diff [--cached] [--word-diff] [-- <files>]
 git add [-p|--patch] [-N|--intent-to-add] [-- <files>]
 git commit [-m "<Commit message>"]
 git log [--graph]

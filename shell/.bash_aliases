@@ -56,7 +56,9 @@ alias gc='git commit'
 # Logs
 alias gl='git log'
 # Very short log: hash | date | subject truncated to fit one line
-alias gls='git log --pretty=format:"%h %Cblue%ad%Creset %<(60,trunc)%s" --date=short'
+alias gls='git log --pretty=format:"%h %Cgreen%ad%Creset %<(60,trunc)%s" --date=short'
+# And a full-fat version
+alias glf='git log --graph --format=fuller'
 
 # Branching
 alias gb='git branch'
