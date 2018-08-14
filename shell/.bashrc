@@ -33,6 +33,10 @@ if [ -r "${HOME}/.bash_aliases" ]; then
     . "${HOME}/.bash_aliases"
 fi
 
+if [ -r "${HOME}/.git_aliases" ]; then
+    . "${HOME}/.git_aliases"
+fi
+
 
 ## BASH COMPLETION ##
 
