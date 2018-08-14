@@ -64,6 +64,8 @@ set scrolloff=3  " Always keep a few lines above/below cursor
 "set spell
 set spelllang=en_gb
 
+set textwidth=79    " Break long lines automatically
+
 " }}}
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 " Code editing {{{
