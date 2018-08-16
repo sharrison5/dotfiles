@@ -61,8 +61,16 @@ set scrolloff=3  " Always keep a few lines above/below cursor
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 " Text editing {{{
 
-"set spell
 set spelllang=en_gb
+
+" Have spelling off by default, but re-enable for some filetypes
+"set spell
+augroup spell
+    " Remove all spelling-related autocommands
+    autocmd!
+    " And then add the new commands
+    autocmd FileType gitcommit,markdown,tex setlocal spell
+augroup END
 
 set textwidth=79    " Break long lines automatically
 
