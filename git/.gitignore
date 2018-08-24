@@ -50,6 +50,7 @@
 *-blx.bib
 *.dvi
 *-eps-converted-to.pdf
+*.fls
 *.fdb_latexmk
 *.glg
 *.glo
@@ -73,11 +74,19 @@
 *.ps
 *.snm
 *.synctex.gz
+*.tex.swp
 *.toc
 *.top
 *.tui
 *.vrb
 *.xdy
+
+
+## MATLAB ##
+
+*.m~
+*.mat
+*.mex*
 *.xml
 
 
@@ -89,8 +98,6 @@ __pycache__/
 .ipynb_checkpoints
 
 
-## MATLAB ##
+## VIM ##
 
-*.m~
-*.mat
-*.mex*
+*.swp
