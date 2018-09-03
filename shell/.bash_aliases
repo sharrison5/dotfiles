@@ -33,3 +33,5 @@ alias rsync='rsync --verbose --human-readable --progress --stats'
 
 alias ipy='ipython'
 alias ipylab='ipython --profile=basics --matplotlib'
+
+alias jn='jupyter notebook'
