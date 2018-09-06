@@ -96,6 +96,10 @@ set foldmethod=marker   " Fold based on three sets of curly braces
 set foldlevelstart=0    " All folds closed to start with
 set foldminlines=0      " Close all folds, even if single-line
 
+" Requiring a space reduces false positives, but shouldn't completely break
+" the defaults
+set foldmarker=\ {{{,\ }}}
+
 " }}}
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 " Searching {{{
