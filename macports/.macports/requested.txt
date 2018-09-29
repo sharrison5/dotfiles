@@ -1,22 +1,24 @@
-Tue  3 Jul 2018 10:29:50 CEST
-armadillo
+# Utilities
 bash
 bash-completion
-boost
-curl
-ffmpeg
-gcc7
-gcc_select
+curl +ssl
 git
-gnuplot
-hdf5
-port_cutleaves
 rsync
 sloccount
-sshfs
 stow
-tclap
-testdisk
 tree
 watch
-wget
+wget +ssl
+# Optional
+ffmpeg
+gnuplot
+sshfs
+testdisk
+
+# C++
+armadillo
+boost -python27
+gcc_select
+gcc8
+hdf5 +gcc8
+tclap
