@@ -18,3 +18,6 @@ export CONDA_DIR=
 export CONDA_DEFAULT_ENV=
 
 export FSLDIR=
+
+# For wttr.in
+export WTTR_LOCATION=

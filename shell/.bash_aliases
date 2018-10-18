@@ -35,3 +35,9 @@ alias ipy='ipython'
 alias ipylab='ipython --profile=basics --matplotlib'
 
 alias jn='jupyter notebook'
+
+
+## WEATHER ##
+
+# https://github.com/chubin/wttr.in
+alias weather='curl wttr.in/$WTTR_LOCATION'
