@@ -3,6 +3,8 @@ bash
 bash-completion
 curl +ssl
 git
+neofetch
+pv
 rsync
 sloccount
 stow
@@ -21,4 +23,5 @@ boost -python27
 gcc_select
 gcc8
 hdf5 +gcc8
+# Optional
 tclap
