@@ -2,10 +2,13 @@
 bash
 bash-completion
 curl +ssl
+dos2unix
 git
+htop
 neofetch
 pv
 rsync
+shellcheck
 sloccount
 stow
 tree
