@@ -12,6 +12,7 @@ shellcheck
 sloccount
 stow
 tree
+vim
 watch
 wget +ssl
 # Optional

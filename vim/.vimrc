@@ -87,6 +87,9 @@ filetype on         " Detect filetype
 filetype plugin on  " Tweak editor behaviour based on filetype
 filetype indent on  " And use file-specific indentation behaviour
 
+set backspace=indent,eol,start  " More intuitive backspace in insert mode
+" https://vi.stackexchange.com/a/2163
+
 " }}}
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 " Folding {{{
