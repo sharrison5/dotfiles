@@ -90,6 +90,9 @@ filetype indent on  " And use file-specific indentation behaviour
 set backspace=indent,eol,start  " More intuitive backspace in insert mode
 " https://vi.stackexchange.com/a/2163
 
+" Non-standard extensions
+autocmd BufNewFile,BufRead *.t++ set syntax=cpp
+
 " }}}
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 " Folding {{{
