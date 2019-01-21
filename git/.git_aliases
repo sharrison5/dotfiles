@@ -13,7 +13,7 @@ alias gssc='clear; echo "Status:"; git status --short'
 
 # Diff
 alias gd='git diff'
-alias gdc='git diff --cached'
+alias gds='git diff --staged'
 
 # Add
 alias ga='git add'
