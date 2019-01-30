@@ -6,6 +6,7 @@ dos2unix
 git
 htop
 neofetch
+parallel
 pv
 rsync
 shellcheck
@@ -22,7 +23,7 @@ sshfs
 testdisk
 
 # C++
-armadillo
+armadillo +gcc8
 boost -python27
 gcc_select
 gcc8

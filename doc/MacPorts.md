@@ -26,7 +26,7 @@ sudo port select --set <port> <variant>
 
 ### Management
 ```
-~/.macports/save_requested
+~/.macports/print_status.sh
 ```
 It can be useful to mark common ports as requested, so that they do not
 get cleaned up and then reinstalled repeatedly. To do this, use:
@@ -41,8 +41,6 @@ sudo port uninstall --follow-dependencies <blah>
 ```
 ```
 du -sh /opt/local/
-sudo port uninstall inactive
-sudo port_cutleaves # May need to run several times
 sudo port reclaim
 du -sh /opt/local/
 ```
