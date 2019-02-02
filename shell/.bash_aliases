@@ -16,6 +16,11 @@
 #echo ".bash_aliases"
 
 
+## GREP ##
+
+alias grep='grep --color=auto'
+
+
 ## LS ##
 
 #alias ls='ls --color=auto'
