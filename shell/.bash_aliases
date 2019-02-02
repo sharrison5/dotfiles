@@ -23,8 +23,17 @@ alias grep='grep --color=auto'
 
 ## LS ##
 
-#alias ls='ls --color=auto'
-#alias ls='ls -G'
+# https://stackoverflow.com/a/18434831
+case $(uname) in
+    "Linux")
+        alias ls='/bin/ls --color=auto -p'
+        ;;
+    "Darwin" | "FreeBSD")
+        alias ls='/bin/ls -G -p'
+        ;;
+    *)
+        alias ls='ls -p'
+esac
 alias la='ls -a'
 alias ll='ls -lah'
 
