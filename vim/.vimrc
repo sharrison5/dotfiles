@@ -57,6 +57,14 @@ set wildmode=longest:full,full
 
 set scrolloff=3  " Always keep a few lines above/below cursor
 
+" Prefer hjkl to arrow keys
+" https://sanctum.geek.nz/arabesque/vim-anti-patterns/
+" https://stackoverflow.com/q/3776117
+noremap <Up>    <nop>
+noremap <Down>  <nop>
+noremap <Left>  <nop>
+noremap <Right> <nop>
+
 " }}}
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 " Text editing {{{
