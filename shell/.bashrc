@@ -34,6 +34,7 @@ for alias_file in "$HOME"/.*_aliases; do
         . "$alias_file"
     fi
 done
+unset alias_file
 
 
 ## BASH COMPLETION ##
@@ -85,6 +86,7 @@ else
     MACHINE_COLOUR="${cyan}"
 fi
 PS1="${cyan}\u${cr}${grey}@${cr}${MACHINE_COLOUR}${MACHINE_NAME}${cr}${grey}:\W${cr}${grey_b} \$ ${cr}"
+unset cyan cyan_bu grey grey_b cr
 
 
 ## SHELL BEHAVIOUR ##
