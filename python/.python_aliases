@@ -1,0 +1,12 @@
+# .python_aliases
+# Sam Harrison 2019
+# MIT License: a full version of the license is included in the LICENSE file.
+
+
+#echo ".python_aliases"
+
+
+alias ipy='ipython'
+alias ipylab='ipython --profile=basics --matplotlib'
+
+alias jn='jupyter notebook'

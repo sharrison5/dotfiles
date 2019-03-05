@@ -29,13 +29,11 @@ esac
 
 ## ALIASES ##
 
-if [ -r "${HOME}/.bash_aliases" ]; then
-    . "${HOME}/.bash_aliases"
-fi
-
-if [ -r "${HOME}/.git_aliases" ]; then
-    . "${HOME}/.git_aliases"
-fi
+for alias_file in "$HOME"/.*_aliases; do
+    if [ -r "$alias_file" ]; then
+        . "$alias_file"
+    fi
+done
 
 
 ## BASH COMPLETION ##

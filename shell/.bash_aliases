@@ -43,14 +43,6 @@ alias ll='ls -lah'
 alias rsync='rsync --verbose --human-readable --progress --stats'
 
 
-## PYTHON ##
-
-alias ipy='ipython'
-alias ipylab='ipython --profile=basics --matplotlib'
-
-alias jn='jupyter notebook'
-
-
 ## WEATHER ##
 
 # https://github.com/chubin/wttr.in
