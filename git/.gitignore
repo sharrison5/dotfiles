@@ -95,6 +95,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pkl
 .ipynb_checkpoints
 
 
