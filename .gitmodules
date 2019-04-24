@@ -4,3 +4,6 @@
 [submodule "vim/.vim/colors/summerfruit256"]
 	path = vim/.vim/colors/summerfruit256
 	url = https://github.com/SimonGreenhill/summerfruit256.vim.git
+[submodule "nano/.nano"]
+	path = nano/.nano
+	url = https://github.com/scopatz/nanorc.git

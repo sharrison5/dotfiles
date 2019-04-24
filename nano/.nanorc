@@ -1,0 +1,23 @@
+# .nanorc
+# Sam Harrison 2019
+# MIT License: a full version of the license is included in the LICENSE file.
+
+# Editor behaviour
+set autoindent
+set nowrap
+set tabstospaces
+#set whitespace "·"
+
+# Syntax highlighting
+include "~/.nano/c.nanorc"
+include "~/.nano/Dockerfile.nanorc"
+include "~/.nano/git.nanorc"
+include "~/.nano/gitcommit.nanorc"
+include "~/.nano/html.nanorc"
+include "~/.nano/json.nanorc"
+include "~/.nano/makefile.nanorc"
+include "~/.nano/markdown.nanorc"
+include "~/.nano/nanorc.nanorc"
+include "~/.nano/python.nanorc"
+include "~/.nano/sh.nanorc"
+include "~/.nano/yaml.nanorc"
