@@ -30,12 +30,14 @@ There are a few guides in the `doc/` folder:
 ### Stow Installation
 
 ```
-curl -o stow.tar.gz http://ftp.gnu.org/gnu/stow/stow-latest.tar.gz
-tar -xzvf stow.tar.gz
-cd stow-<version>
+wget http://ftp.gnu.org/gnu/stow/stow-latest.tar.gz
+#curl -o stow-latest.tar.gz http://ftp.gnu.org/gnu/stow/stow-latest.tar.gz
+tar -xzvf stow-latest.tar.gz
+cd stow-<version>/
 ./configure --prefix="<dir>"
-make
 make install
+cd ..
+rm -r stow-latest.tar.gz stow-<version>/
 ```
 
 --------------------
