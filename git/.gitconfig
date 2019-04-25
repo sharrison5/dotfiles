@@ -12,8 +12,8 @@
 [core]
 	attributesfile = ~/.gitattributes
 	excludesfile = ~/.gitignore
-	# Trim long lines when paging
-	pager = less -S
+	# Highlight non-ascii and trim long lines when paging
+	pager = LESSCHARSET=ascii less -S
 
 [diff]
 	# Better prefixes than a/ b/
