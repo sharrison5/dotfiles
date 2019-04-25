@@ -48,4 +48,4 @@ alias rsync='rsync --verbose --human-readable --progress --stats'
 ## WEATHER ##
 
 # https://github.com/chubin/wttr.in
-alias weather='curl wttr.in/$WTTR_LOCATION'
+alias weather='curl "wttr.in/${WTTR_LOCATION}"'
