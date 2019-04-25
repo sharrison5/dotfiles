@@ -2,7 +2,7 @@
 # Sam Harrison 2018
 # MIT License: a full version of the license is included in the LICENSE file.
 
-# .bash_profile is read if the login shell is bash. It therefore has two
+# .bash_profile is read if the login shell is bash. It therefore has two
 # main roles:
 #  + Source any global settings from .profile
 #  + If the shell is interactive, source .bashrc

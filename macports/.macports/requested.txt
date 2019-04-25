@@ -16,7 +16,7 @@ tree
 vim
 watch
 wget +ssl
-# Optional
+# Optional
 ffmpeg
 gnuplot
 sshfs

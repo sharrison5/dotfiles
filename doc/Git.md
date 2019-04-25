@@ -372,7 +372,7 @@ git stash pop [stash@{0}]
 
 # Resolve conflicts (as above)
 
-# And then reset the index (i.e. undo the git add)
+# And then reset the index (i.e. undo the git add)
 git reset [-- <files>]
 
 # Git does not remove the old stash if there are errors applying, so need

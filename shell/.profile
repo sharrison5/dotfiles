@@ -6,9 +6,9 @@
 
 # On login, the shell will source .${SHELL}_profile, or, if that is not
 # present, .profile. Therefore, we use this to set the key environment
-# variables and for any intensive operations that you may want to perform on
+#variables and for any intensive operations that you may want to perform on
 # startup, but not for any subsequent subprocesses (e.g. diagnostic information
-# about the machine).
+# about the machine).
 
 # The exported environment variables will be inherited by any subshells /
 # subprocesses, so we should only need to set them once here (and in
@@ -49,21 +49,21 @@
 #echo ".profile"
 
 
-## DEBUG ##
+## DEBUG ##
 
 #export PROFILE_SHELL=$SHELL
 #export PROFILE_TIME=$(date)
 #export PROFILE_0=$0
 
 
-## CONFIG ##
+## CONFIG ##
 
 if [ -r "${HOME}/.machine_specific_config" ]; then
     . "${HOME}/.machine_specific_config"
 fi
 
 
-## PATH ##
+## PATH ##
 
 # Can assume this is already set
 
@@ -92,7 +92,7 @@ if [ -d "${HOME}/lib" ]; then
 fi
 
 
-## EDITORS ETC ##
+## EDITORS ETC ##
 
 # Used to show output a screen at a time
 export PAGER=less
@@ -102,7 +102,7 @@ export EDITOR=vim
 export VISUAL="${EDITOR}"
 
 
-## CONDA ##
+## CONDA ##
 
 # This sets the default environment but, annoyingly, `conda` is a function
 # so we need to source conda.sh again for interactive shells.

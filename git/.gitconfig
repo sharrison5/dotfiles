@@ -35,7 +35,7 @@
 	followTags = true
 
 [status]
-	# Always show paths relative to base dir, even if elsewhere
+	# Always show paths relative to base dir, even if elsewhere
 	relativePaths = false
 	# Show brief branch summary when doing status --short
 	branch = true

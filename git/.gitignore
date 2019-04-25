@@ -37,7 +37,7 @@
 *.so
 
 
-## LATEX ##
+## LATEX ##
 
 *.acn
 *.acr
@@ -82,7 +82,7 @@
 *.xdy
 
 
-## MATLAB ##
+## MATLAB ##
 
 *.m~
 *.mat
@@ -90,7 +90,7 @@
 *.xml
 
 
-## PYTHON ##
+## PYTHON ##
 
 __pycache__/
 *.py[cod]
@@ -99,6 +99,6 @@ __pycache__/
 .ipynb_checkpoints
 
 
-## VIM ##
+## VIM ##
 
 *.swp

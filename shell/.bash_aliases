@@ -40,12 +40,12 @@ case $(uname) in
 esac
 
 
-## RSYNC ##
+## RSYNC ##
 
 alias rsync='rsync --verbose --human-readable --progress --stats'
 
 
-## WEATHER ##
+## WEATHER ##
 
 # https://github.com/chubin/wttr.in
 alias weather='curl wttr.in/$WTTR_LOCATION'

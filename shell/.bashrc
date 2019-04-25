@@ -3,8 +3,8 @@
 # MIT License: a full version of the license is included in the LICENSE file.
 
 # .bashrc gets invoked by interactive, non-login shells (e.g. a new terminal
-# window in a graphical session; note that all shells are login for macOS).
-# Most of the key environment variables are inherited from the login shell
+# window in a graphical session; note that all shells are login for macOS).
+# Most of the key environment variables are inherited from the login shell
 # via .bash_profile, so this should just contain:
 #  + What isn't inherited (e.g. aliases).
 #  + Anything specific to interactive shells.
@@ -47,7 +47,7 @@ if [ -r "/usr/share/bash-completion/bash_completion" ]; then
 fi
 
 
-## CONDA ##
+## CONDA ##
 
 # `conda` is a function so this needs to be sourced every time (not inherited).
 if [ -n "${CONDA_DIR}" ]; then
