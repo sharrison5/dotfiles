@@ -108,8 +108,10 @@ export VISUAL="${EDITOR}"
 # so we need to source conda.sh again for interactive shells.
 if [ -n "${CONDA_DEFAULT_ENV}" ] && [ -n "${CONDA_DIR}" ]; then
     if [ -r "${CONDA_DIR}/etc/profile.d/conda.sh" ]; then
+        echo "Activating default conda env (${CONDA_DEFAULT_ENV})..."
         . "${CONDA_DIR}/etc/profile.d/conda.sh"
         conda activate "${CONDA_DEFAULT_ENV}"
+        echo "...activated"
     else
         echo ".profile: \$CONDA_DIR set but could not source conda.sh!" 1>&2
     fi
@@ -120,9 +122,11 @@ fi
 
 if [ -n "${FSLDIR}" ]; then
     if  [ -d "${FSLDIR}" ]; then
+        echo "Activating FSL (${FSLDIR})..."
         PATH="${FSLDIR}/bin:${PATH}"
         . "${FSLDIR}/etc/fslconf/fsl.sh"
         . "${FSLDIR}/etc/fslconf/fsl-devel.sh"
+        echo "...activated"
     else
         echo ".profile: \$FSLDIR set but not a directory!" 1>&2
     fi
