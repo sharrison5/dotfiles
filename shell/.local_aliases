@@ -1,0 +1,9 @@
+# .local_aliases
+# Sam Harrison 2019
+# MIT License: a full version of the license is included in the LICENSE file.
+
+# By adding any local aliases here, it is more straightforward to merge
+# upstream changes. See `.bash_aliases` for more information.
+
+
+#echo ".local_aliases"

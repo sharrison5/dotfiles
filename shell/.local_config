@@ -1,4 +1,4 @@
-# .machine_specific_config
+# .local_config
 # Sam Harrison 2018
 # MIT License: a full version of the license is included in the LICENSE file.
 
@@ -7,8 +7,11 @@
 # incorporate into the environment as necessary, rather than this file doing
 # the setup itself.
 
+# By adding any local variables here, it is more straightforward to merge
+# upstream changes. See `.profile` for more information.
 
-#echo ".machine_specific_config"
+
+#echo ".local_config"
 
 
 # For shell prompt

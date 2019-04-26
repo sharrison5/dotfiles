@@ -58,8 +58,8 @@
 
 ## CONFIG ##
 
-if [ -r "${HOME}/.machine_specific_config" ]; then
-    . "${HOME}/.machine_specific_config"
+if [ -r "${HOME}/.local_config" ]; then
+    . "${HOME}/.local_config"
 fi
 
 

@@ -5,5 +5,8 @@
 # Use this for running any machine-specific commands after the shell
 # environment has been set up.
 
+# By adding any local commands here, it is more straightforward to merge
+# upstream changes. See `.profile` for more information.
+
 
 #echo ".local_profile"
