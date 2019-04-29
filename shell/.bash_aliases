@@ -25,14 +25,14 @@ alias grep='grep --color=auto'
 
 alias ls='ls -p'
 alias la='ls -a'
-alias ll='ls -lah'
+alias ll='ls -lAh'
 # OS specific options (N.B. use `/bin/ls` as we want to make sure we use the
 # version bundled with the system, and not any different versions)
 # https://stackoverflow.com/a/18434831
 case $(uname) in
     "Linux")
         alias ls='/bin/ls --color=auto -p'
-        alias ll='ls -lah --time-style="+%Y-%m-%d"'
+        alias ll='ls -lAh --time-style="+%Y-%m-%d"'
         ;;
     "Darwin" | "FreeBSD")
         alias ls='/bin/ls -G -p'
