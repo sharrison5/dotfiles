@@ -23,10 +23,10 @@ sshfs
 testdisk
 
 # C++
-armadillo +gcc8
+armadillo +gcc9
 boost -python27
 gcc_select
-gcc8
-hdf5 +gcc8
+gcc9
+hdf5 +gcc9
 # Optional
 tclap
