@@ -32,10 +32,11 @@ alias ll='ls -lAh'
 case $(uname) in
     "Linux")
         alias ls='/bin/ls --color=auto -p'
-        alias ll='ls -lAh --time-style="+%Y-%m-%d"'
+        alias ll='ls -lAh --time-style=long-iso'
         ;;
     "Darwin" | "FreeBSD")
         alias ls='/bin/ls -G -p'
+        alias ll='ls -lAh -T'
         ;;
 esac
 
