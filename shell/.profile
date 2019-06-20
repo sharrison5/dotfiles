@@ -124,16 +124,14 @@ fi
 
 ## FSL ##
 
-if [ -n "${FSLDIR}" ]; then
-    if  [ -d "${FSLDIR}" ]; then
-        echo "Activating FSL (${FSLDIR})..."
-        PATH="${FSLDIR}/bin:${PATH}"
-        . "${FSLDIR}/etc/fslconf/fsl.sh"
-        . "${FSLDIR}/etc/fslconf/fsl-devel.sh"
-        echo "...activated"
-    else
-        echo ".profile: \$FSLDIR set but not a directory!" 1>&2
-    fi
+if [ -n "${FSLDIR}" ] && [ -d "${FSLDIR}" ]; then
+    echo "Activating FSL (${FSLDIR})..."
+    PATH="${FSLDIR}/bin:${PATH}"
+    . "${FSLDIR}/etc/fslconf/fsl.sh"
+    . "${FSLDIR}/etc/fslconf/fsl-devel.sh"
+    echo "...activated"
+elif [ -n "${FSLDIR}" ] && [ ! -d "${FSLDIR}" ]; then
+    echo ".profile: \$FSLDIR set but not a directory!" 1>&2
 fi
 
 
