@@ -106,15 +106,19 @@ export VISUAL="${EDITOR}"
 
 # This sets the default environment but, annoyingly, `conda` is a function
 # so we need to source conda.sh again for interactive shells.
-if [ -n "${CONDA_DEFAULT_ENV}" ] && [ -n "${CONDA_DIR}" ]; then
+if [ -n "${CONDA_DIR}" ] && [ -d "${CONDA_DIR}" ]; then
     if [ -r "${CONDA_DIR}/etc/profile.d/conda.sh" ]; then
-        echo "Activating default conda env (${CONDA_DEFAULT_ENV})..."
         . "${CONDA_DIR}/etc/profile.d/conda.sh"
-        conda activate "${CONDA_DEFAULT_ENV}"
-        echo "...activated"
+        if [ -n "${CONDA_DEFAULT_ENV}" ]; then
+            echo "Activating default conda env (${CONDA_DEFAULT_ENV})..."
+            conda activate "${CONDA_DEFAULT_ENV}"
+            echo "...activated"
+        fi
     else
-        echo ".profile: \$CONDA_DIR set but could not source conda.sh!" 1>&2
+        export PATH="${CONDA_DIR}/bin:$PATH"
     fi
+elif [ -n "${CONDA_DIR}" ] && [ ! -d "${CONDA_DIR}" ]; then
+    echo ".profile: \$CONDA_DIR set but not a directory!" 1>&2
 fi
 
 

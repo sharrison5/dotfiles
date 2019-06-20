@@ -11,6 +11,7 @@
 
 # Note that we typically shouldn't export variables related to interactive
 # sessions only, they are not meant to be inherited:
+# https://unix.stackexchange.com/a/197333
 # https://unix.stackexchange.com/q/247585
 
 # See .profile for some useful links.
@@ -50,12 +51,21 @@ fi
 ## CONDA ##
 
 # `conda` is a function so this needs to be sourced every time (not inherited).
-if [ -n "${CONDA_DIR}" ]; then
-    if [ -r "${CONDA_DIR}/etc/profile.d/conda.sh" ]; then
-        . "${CONDA_DIR}/etc/profile.d/conda.sh"
+if [ -n "${CONDA_DIR}" ] && [ -d "${CONDA_DIR}" ]; then
+    # conda init --dry-run --verbose
+    __conda_setup="$("${CONDA_DIR}/bin/conda" 'shell.bash' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
     else
-        echo ".bashrc: \$CONDA_DIR set but could not source conda.sh!" 1>&2
+        if [ -r "${CONDA_DIR}/etc/profile.d/conda.sh" ]; then
+            . "${CONDA_DIR}/etc/profile.d/conda.sh"
+        else
+            export PATH="${CONDA_DIR}/bin:$PATH"
+        fi
     fi
+    unset __conda_setup
+elif [ -n "${CONDA_DIR}" ] && [ ! -d "${CONDA_DIR}" ]; then
+    echo ".bashrc: \$CONDA_DIR set but not a directory!" 1>&2
 fi
 
 
