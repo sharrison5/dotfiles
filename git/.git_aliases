@@ -31,7 +31,8 @@ alias glf='git log --graph --format=fuller'
 
 # Branching
 alias gb='git branch'
-alias gba='git branch --all --verbose --verbose'
+alias gba='git branch --all'
+alias gbv='git branch --verbose --verbose'
 
 # Remotes
 alias gr='git remote'
