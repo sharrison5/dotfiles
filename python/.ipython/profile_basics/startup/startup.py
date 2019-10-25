@@ -7,13 +7,23 @@
 # https://ipython.readthedocs.io/en/stable/config/intro.html#profiles
 # https://stackoverflow.com/a/20528503
 
+import warnings
+
 import math
+import random
+#import statistics
+
 import numpy
 np = numpy
-import scipy, scipy.stats
+try:
+    import scipy, scipy.stats
+except ImportError:
+    warnings.warn("Could not import scipy.")
 
 # Best to invoke ipython with the `--matplotlib` flag too
 # https://ipython.readthedocs.io/en/stable/interactive/reference.html#matplotlib-support
 import matplotlib, matplotlib.pyplot
 mpl = matplotlib
 plt = matplotlib.pyplot
+
+mpl.rcParams['image.aspect'] = 'auto'
