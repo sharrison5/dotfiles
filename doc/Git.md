@@ -85,7 +85,10 @@ That should have us up and running, but we typically want to add SSH keys to
 streamline the process of interacting with the server. Generate the key
 using e.g.:
 ```
-ssh-keygen -t rsa -C "<example@email.com> <description>" -b 4096
+LOCAL=home-laptop REMOTE=work-server EMAIL=sharrison5@example.com \
+    FILE="${HOME}/.ssh/id_rsa_${LOCAL}_${REMOTE}" \
+    COMMENT="${LOCAL} ${REMOTE} ${EMAIL} $(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
+    sh -c 'ssh-keygen -t rsa -b 4096 -f "${FILE}" -C "${COMMENT}"'
 ```
 For the `<description>`, it is useful to know both the origin and destination
 of the connection. As `~/.ssh/authorized_keys` contains the public keys, the
