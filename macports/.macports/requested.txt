@@ -1,3 +1,7 @@
+# MacPorts
+cmake
+pkgconfig
+
 # Utilities
 bash
 bash-completion
@@ -17,6 +21,7 @@ vim
 watch
 wget +ssl
 # Optional
+dcm2niix
 ffmpeg
 gnuplot
 sshfs
@@ -24,7 +29,7 @@ testdisk
 
 # C++
 armadillo +gcc9
-boost -python27
+boost -python37
 gcc_select
 gcc9
 hdf5 +gcc9
