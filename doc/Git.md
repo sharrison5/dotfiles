@@ -85,25 +85,24 @@ That should have us up and running, but we typically want to add SSH keys to
 streamline the process of interacting with the server. Generate the key
 using e.g.:
 ```
-LOCAL=home-laptop REMOTE=work-server EMAIL=sharrison5@example.com \
-    FILE="${HOME}/.ssh/id_rsa_${LOCAL}_${REMOTE}" \
-    COMMENT="${LOCAL} ${REMOTE} ${EMAIL} $(date -u +"%Y-%m-%dT%H:%M:%SZ")" \
-    sh -c 'ssh-keygen -t rsa -b 4096 -f "${FILE}" -C "${COMMENT}"'
+~/dotfiles/scripts/generate_ssh_key.sh \
+    home-laptop work-server sharrison5@example.com
 ```
-For the `<description>`, it is useful to know both the origin and destination
-of the connection. As `~/.ssh/authorized_keys` contains the public keys, the
-description should uniquely identify the connecting machine. Similarly, it
-seems better-safe-than-sorry to include the destination for identifying the
-keys on the origin machine. Therefore `<origin> <destination>` seems
-sensible, where e.g. the hostnames could be used.
+For the comment in the keyfile, it is useful to know both the origin and
+destination of the connection. As `~/.ssh/authorized_keys` contains the public
+keys, the description should uniquely identify the connecting machine.
+Similarly, it seems better-safe-than-sorry to include the destination for
+identifying the keys on the origin machine. Therefore `<origin> <destination>`
+seems sensible, where e.g. the hostnames could be used (with email and date
+etc.).
 
-Save the keys to e.g. `~/.ssh/id_rsa_<destination>`. Copy the **public** key
-(`.pub`) to the server, and then modify `~/.ssh/config` as follows:
+Copy the **public** key (`.pub`) to the server, and then modify `~/.ssh/config`
+as follows (see also the template in `shell/.ssh/`):
 ```
 # Git server
 Host git.com
-PubkeyAuthentication yes
-IdentityFile ~/.ssh/id_rsa_<description>
+    PubkeyAuthentication yes
+    IdentityFile ~/.ssh/id_rsa_<description>
 ```
 Finally, it may be necessary to change the remote to use SSH if it is not
 already configured to do so. Do this using:
