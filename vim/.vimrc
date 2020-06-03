@@ -148,7 +148,9 @@ set showmatch   " Highlight matching brackets
 " Highlight tabs and trailing whitespace
 " https://vi.stackexchange.com/a/423
 set list
-set listchars=tab:├─,trail:·
+set listchars=tab:├─,trail:·,nbsp:&
+" Convenience for getting rid of non-breaking spaces
+command NBSP %s/\%u00A0/ /gc
 
 " }}}
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
