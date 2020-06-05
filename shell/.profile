@@ -129,7 +129,9 @@ if [ -n "${FSLDIR}" ] && [ -d "${FSLDIR}" ]; then
     PATH="${FSLDIR}/bin:${PATH}"
     . "${FSLDIR}/etc/fslconf/fsl.sh"
     . "${FSLDIR}/etc/fslconf/fsl-devel.sh"
-    echo "...activated"
+    version=$(awk -F  ":" 'NR==1 {print $1}' "${FSLDIR}/etc/fslversion")
+    echo "...activated (v$version)"
+    unset version
 elif [ -n "${FSLDIR}" ] && [ ! -d "${FSLDIR}" ]; then
     echo ".profile: \$FSLDIR set but not a directory!" 1>&2
 fi
