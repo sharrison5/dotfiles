@@ -27,6 +27,9 @@ sudo port select --set <port> <variant>
 ### Management
 ```
 ~/.macports/print_status.sh
+
+port [r]deps <port>        # What `port` requires
+port [r]dependents <port>  # What depends on `port`
 ```
 It can be useful to mark common ports as requested, so that they do not
 get cleaned up and then reinstalled repeatedly. To do this, use:

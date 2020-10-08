@@ -22,16 +22,17 @@ watch
 wget +ssl
 # Optional
 dcm2niix
+exiv2  # exiv2 -r '%Y-%m-%d_%H-%M-%S' rename *.jpg
 ffmpeg
 gnuplot
 sshfs
 testdisk
 
 # C++
-armadillo +gcc9
-boost -python37
+armadillo +gcc10
+boost -python38
 gcc_select
-gcc9
-hdf5 +gcc9
+gcc10
+hdf5 +gcc10
 # Optional
 tclap
