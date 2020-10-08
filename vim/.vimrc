@@ -82,6 +82,8 @@ augroup END
 
 set textwidth=79    " Break long lines automatically
 
+set nojoinspaces    " Disable French spacing when joining/rewrapping text
+
 " }}}
 " - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 " Code editing {{{
