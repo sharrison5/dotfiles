@@ -10,12 +10,18 @@ Management is via [Stow](https://www.gnu.org/software/stow/).
 ```
 git clone --recurse-submodules https://github.com/sharrison5/dotfiles.git
 cd dotfiles/
-stow [--target="$HOME"] <package>
+stow --no-folding [--target="$HOME"] <package/>
 ```
 
-Note that some of the packages require slightly different treatment. The
-relevant documentation is linked below:
- + [`python/`](python/README.md)
+Note that some of the packages require slightly different treatment:
+```
+stow --no-folding python/
+ipython profile create basics
+
+mkdir --verbose --parents ~/.vim/
+stow vim/
+```
+
 
 --------------------
 
