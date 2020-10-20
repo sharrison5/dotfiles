@@ -20,10 +20,10 @@ export LANG=en_GB.UTF-8
 # For shell prompt
 export MACHINE_NAME='\h'
 
-export CONDA_DIR=
-export CONDA_DEFAULT_ENV=
+#export CONDA_DIR=
+#export CONDA_DEFAULT_ENV=
 
-export FSLDIR=
+#export FSLDIR=
 
 # For wttr.in
-export WTTR_LOCATION=
+#export WTTR_LOCATION=
