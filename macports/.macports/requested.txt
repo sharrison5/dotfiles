@@ -29,10 +29,12 @@ sshfs
 testdisk
 
 # C++
-armadillo +gcc10
+armadillo +clang11
 boost -python38
+clang_select
+clang-11
 gcc_select
 gcc10
-hdf5 +gcc10
+hdf5 +clang11
 # Optional
 tclap
