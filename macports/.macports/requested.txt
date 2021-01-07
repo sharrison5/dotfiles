@@ -8,10 +8,11 @@ bash-completion
 curl +ssl
 dos2unix
 git
-htop
+mpstats
 neofetch
 parallel
 pv
+p7zip
 rsync
 shellcheck
 sloccount
@@ -25,12 +26,14 @@ dcm2niix
 exiv2  # exiv2 -r '%Y-%m-%d_%H-%M-%S' rename *.jpg
 ffmpeg
 gnuplot
+htop
+nano
 sshfs
 testdisk
 
 # C++
 armadillo +clang11
-boost -python38
+boost +clang11 -python38
 clang_select
 clang-11
 gcc_select
