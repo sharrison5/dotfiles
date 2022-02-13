@@ -46,6 +46,12 @@ esac
 alias rsync='rsync --verbose --human-readable --progress --stats'
 
 
+## SUDO ##
+
+# Lets local aliases be used with sudo
+alias sudo='sudo '
+
+
 ## WEATHER ##
 
 # https://github.com/chubin/wttr.in
