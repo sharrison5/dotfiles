@@ -1,3 +1,7 @@
+# .pre-commit-config.yaml
+# Sam Harrison 2022
+# MIT License: a full version of the license is included in the LICENSE file.
+
 # See <https://pre-commit.com> for more information
 # See <https://pre-commit.com/hooks.html> for more hooks
 repos:
