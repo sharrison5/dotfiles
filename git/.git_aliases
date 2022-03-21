@@ -7,6 +7,7 @@
 
 
 # Config
+alias gconf='git config --show-scope --list'
 alias guser='git config --show-scope --get-regexp  "^user\."'
 
 # Status
@@ -44,6 +45,7 @@ alias grs='git remote show'
 
 # Fetching
 alias gf='git fetch --verbose'
+alias gfp='git fetch --verbose --prune'
 # Merge upstream branch
 alias gmu='git merge --ff-only @{upstream}'
 
