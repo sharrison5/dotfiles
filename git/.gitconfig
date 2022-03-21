@@ -20,6 +20,8 @@
 	mnemonicPrefix = true
 	# Detect copies as well as renames
 	renames = copies
+	# Always show whitespace errors
+	wsErrorHighlight = all
 
 [merge]
 	# More useful display of merge conflicts
