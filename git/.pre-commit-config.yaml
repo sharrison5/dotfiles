@@ -1,0 +1,23 @@
+# See <https://pre-commit.com> for more information
+# See <https://pre-commit.com/hooks.html> for more hooks
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.1.0
+    hooks:
+    -   id: check-added-large-files
+    -   id: check-executables-have-shebangs
+    -   id: check-json
+    -   id: check-shebang-scripts-are-executable
+    -   id: check-symlinks
+    -   id: check-toml
+    -   id: check-xml
+    -   id: check-yaml
+    -   id: destroyed-symlinks
+    -   id: detect-private-key
+    -   id: end-of-file-fixer
+    -   id: mixed-line-ending
+        args: ['--fix=lf']
+    -   id: trailing-whitespace
+
+# To add custom hooks see <https://pre-commit.com/#new-hooks>
+# And to use local hooks see <https://pre-commit.com/#repository-local-hooks>

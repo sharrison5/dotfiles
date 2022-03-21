@@ -6,3 +6,5 @@
 
 # Stow's built in ignore list includes .gitignore so that will not get linked.
 # However, a local file overrides those defaults so this fixes that issue.
+
+^/.pre-commit-config.yaml
