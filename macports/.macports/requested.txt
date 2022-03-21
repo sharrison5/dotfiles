@@ -8,6 +8,7 @@ bash-completion
 curl +ssl
 dos2unix
 git
+jq
 mpstats
 neofetch
 parallel
