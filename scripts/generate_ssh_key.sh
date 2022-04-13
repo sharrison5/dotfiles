@@ -19,7 +19,10 @@ email=$3
 
 # ssh-keygen ------------------------------------------------------------------
 
-filename="${HOME}/.ssh/id_ed25519_${local_name}_${remote_name}"
+method=ed25519
+#method=rsa-sha2-512
+
+filename="${HOME}/.ssh/id_${method}_${local_name}_${remote_name}"
 comment="${local_name} ${remote_name} ${email} $(date -u +"%Y-%m-%dT%H:%M:%SZ")"
 echo "Key file: $filename"
 echo "Key comment: $comment"
@@ -28,7 +31,7 @@ echo "Key comment: $comment"
 # https://security.stackexchange.com/a/144044
 # https://stribika.github.io/2015/01/04/secure-secure-shell.html
 ssh-keygen \
-    -t ed25519 -a 100 \
+    -t "$method" -a 100 \
     -f "$filename" -C "$comment"
 
 # -----------------------------------------------------------------------------
