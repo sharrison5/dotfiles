@@ -37,6 +37,7 @@ alias glf='git log --graph --format=fuller'
 alias gb='git branch'
 alias gba='git branch --all'
 alias gbv='git branch --verbose --verbose'
+alias gbs='git branch --verbose | grep "\[gone\]"'
 
 # Remotes
 alias gr='git remote'
