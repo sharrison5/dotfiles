@@ -16,6 +16,8 @@
 	pager = LESSCHARSET=ascii less -S
 
 [diff]
+	# Try harder to give cleaner diffs
+	algorithm = histogram
 	# Better prefixes than a/ b/
 	mnemonicPrefix = true
 	# Detect copies as well as renames
@@ -25,7 +27,7 @@
 
 [merge]
 	# More useful display of merge conflicts
-	conflictstyle = diff3
+	conflictStyle = diff3
 
 [pull]
 	# Only fast-forward merges allowed when pulling
