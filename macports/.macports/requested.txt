@@ -26,8 +26,10 @@ dcm2niix
 exiv2  # exiv2 -r '%Y-%m-%d_%H-%M-%S' rename *.jpg
 ffmpeg
 gnuplot
+gti
 htop
 nano
+sl
 sshfs
 testdisk
 
