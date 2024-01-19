@@ -1,9 +1,9 @@
-[submodule "vim/.vim/colors/vim-lucius"]
-	path = vim/.vim/colors/vim-lucius
-	url = https://github.com/jonathanfilip/vim-lucius.git
-[submodule "vim/.vim/colors/summerfruit256"]
-	path = vim/.vim/colors/summerfruit256
-	url = https://github.com/SimonGreenhill/summerfruit256.vim.git
 [submodule "nano/.nano"]
 	path = nano/.nano
 	url = https://github.com/scopatz/nanorc.git
+[submodule "vim/.vim/pack/colors/start/summerfruit256.vim"]
+	path = vim/.vim/pack/colors/start/summerfruit256.vim
+	url = https://github.com/euoia/summerfruit256.vim.git
+[submodule "vim/.vim/pack/colors/start/vim-lucius"]
+	path = vim/.vim/pack/colors/start/vim-lucius
+	url = https://github.com/jonathanfilip/vim-lucius.git
