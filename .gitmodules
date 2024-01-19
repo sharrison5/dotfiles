@@ -7,3 +7,6 @@
 [submodule "vim/.vim/pack/colors/start/vim-lucius"]
 	path = vim/.vim/pack/colors/start/vim-lucius
 	url = https://github.com/jonathanfilip/vim-lucius.git
+[submodule "vim/.vim/pack/syntax/start/stan-vim"]
+	path = vim/.vim/pack/syntax/start/stan-vim
+	url = https://github.com/eigenfoo/stan-vim.git
