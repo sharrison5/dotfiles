@@ -43,3 +43,6 @@ gcc10
 hdf5 +clang11
 # Optional
 tclap
+
+# Python
+uv
