@@ -45,4 +45,8 @@ hdf5 +clang11
 tclap
 
 # Python
+# uv is great for managing projects that are primarily Python based (i.e. it
+# is an alternative to pip). For projects that require either system
+# dependencies or other languages, try pixi as an alternative to conda.
+# See e.g. https://github.com/astral-sh/uv/issues/1703
 uv
