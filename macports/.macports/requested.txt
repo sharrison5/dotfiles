@@ -44,6 +44,9 @@ hdf5 +clang11
 # Optional
 tclap
 
+# JS/TS
+fnm
+
 # Python
 # uv is great for managing projects that are primarily Python based (i.e. it
 # is an alternative to pip). For projects that require either system
