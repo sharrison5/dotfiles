@@ -2,6 +2,27 @@
 # Sam Harrison 2018
 # MIT License: a full version of the license is included in the LICENSE file.
 
+## TEXT ##
+
+# Git has moved to a model where it is now possible to track line-ending
+# settings *within repo* via the `.gitattributes` file. Adding the `text`
+# attribute for a file matching pattern turns on normalisation (i.e. it means
+# that files are always stored in the repository as LF), and then `eol` covers
+# how they behave when checked out. For example, when used together, it is
+# possible to make Git enforce an 'always LF' approach without further
+# configuration of editors etc.
+#
+# References:
+# https://git-scm.com/docs/gitattributes
+# https://stackoverflow.com/a/10855862
+# https://stackoverflow.com/a/42135910
+# https://adaptivepatchwork.com/2012/03/01/mind-the-end-of-your-line/
+
+# Git manages line endings, files appear as CRLF on Windows and LF elsewhere
+#* text=auto
+# Force files to use LF regardless of the platform
+#* text=auto eol=lf
+
 
 ## ARCHIVES etc ##
 
