@@ -67,9 +67,12 @@ fi
 
 # Can assume this is already set
 
-if [ -d "${HOME}/bin" ]; then
-    PATH="${HOME}/bin:${PATH}"
-fi
+for local_dir in "${HOME}" "${HOME}/.local"; do
+    if [ -d "${local_dir}/bin" ]; then
+        PATH="${local_dir}/bin:${PATH}"
+    fi
+done
+unset local_dir
 
 # MacPorts
 # export PATH="/opt/local/bin:/opt/local/sbin:${PATH}"
