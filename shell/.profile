@@ -122,6 +122,14 @@ elif [ -n "${CONDA_DIR}" ] && [ ! -d "${CONDA_DIR}" ]; then
 fi
 
 
+## FNM ##
+
+# https://github.com/Schniz/fnm/issues/351
+if command -v fnm &> /dev/null; then
+    eval "$(fnm env)"  # --use-on-cd
+fi
+
+
 ## FSL ##
 
 if [ -n "${FSLDIR}" ] && [ -d "${FSLDIR}" ]; then

@@ -10,11 +10,3 @@
 
 
 #echo ".local_profile"
-
-
-## FNM ##
-
-# https://github.com/Schniz/fnm/issues/351
-if command -v fnm &> /dev/null; then
-    eval "$(fnm env)"  # --use-on-cd
-fi
