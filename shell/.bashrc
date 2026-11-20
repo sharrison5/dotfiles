@@ -50,6 +50,16 @@ if ! shopt -oq posix; then
     fi
 fi
 
+# fnm
+if command -v fnm &> /dev/null; then
+    eval "$(fnm completions --shell bash)"
+fi
+
+# uv
+if command -v uv &> /dev/null; then
+    eval "$(uv generate-shell-completion bash)"
+fi
+
 
 ## CONDA ##
 
