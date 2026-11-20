@@ -148,6 +148,27 @@ elif [ -n "${FSLDIR}" ] && [ ! -d "${FSLDIR}" ]; then
 fi
 
 
+## NODE ###
+
+if [ -n "${FNM_DIR}" ] && [ -d "${FNM_DIR}" ]; then
+    PATH="${FNM_DIR}:${PATH}"
+fi
+# https://github.com/Schniz/fnm/issues/351
+if command -v fnm &> /dev/null; then
+    # fnm can't work out what shell is runnnig if this runs during login on
+    # Ubuntu, so hardcode instead
+    if [ "$SHELL" = "/bin/bash" ]; then
+        eval "$(fnm env --shell bash)"  # --use-on-cd
+    else
+        eval "$(fnm env)"
+    fi
+fi
+
+if [ -n "${PNPM_DIR}" ] && [ -d "${PNPM_DIR}" ]; then
+    PATH="${PNPM_DIR}/bin:${PATH}"
+fi
+
+
 ## LOCAL COMMANDS ##
 
 # And finally run any machine specific commands

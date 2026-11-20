@@ -25,5 +25,8 @@ export MACHINE_NAME='\h'
 
 #export FSLDIR=
 
+#export FNM_DIR=
+#export PNPM_DIR=
+
 # For wttr.in
 #export WTTR_LOCATION=
